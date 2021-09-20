@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Use the TechSource website to place orders</h1>
+
+        <p class="govuk-body">You will need to place orders on a website called TechSource, which is run by Computacenter.</p>
+
+        <p class="govuk-body">We will create a TechSource account for you. You'll get an email with instructions about your account when it is ready.</p>
+
+        {{ govukButton({
+        text: "Continue",
+        href: "school-someone-access",
+        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+        isStartButton: false
+        }) }}
+
+    </div>
+
+</div>
+{% endblock %}

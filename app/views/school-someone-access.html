@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Do you need to give someone else access?</h1>
+
+        <p class="govuk-body">Invite someone in your school or college who:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>understands what devices are needed and who will get them</li>
+            <li>can configure devices or give technical information</li>
+        </ul>
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set nameHtml %}
+{{ govukInput({
+  id: "name",
+  name: "name",
+  type: "name",
+  autocomplete: "name",
+  spellcheck: false,
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Name (!!NEEDS TO BE THOUGHT ABOUT UX!!)"
+  }
+}) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "contact",
+  name: "contact",
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: false,
+      classes: ""
+    }
+  },
+  hint: {
+    text: ""
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes, I need to add someone",
+      conditional: {
+        html: nameHtml
+      }
+      
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+        {{ govukButton({
+        text: "Continue",
+        href: "school-devices-order",
+        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+        isStartButton: false
+        }) }}
+
+    </div>
+
+</div>
+{% endblock %}

@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Getting help with technology
 {% endblock %}
 
 {% block content %}
@@ -10,35 +10,144 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
+        Getting help with technology Prototypes 2021/22
+      </h1>
       <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
+        This is the GHWT prototype homepage, here you will find prototypes for each user flow.
       </p>
+      <p>The change log contains incremental updates made to the prototypes</p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+<br><br>
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+{# {{ govukButton({
+  text: "Save and continue"
+}) }} #}
+      {% from "govuk/components/table/macro.njk" import govukTable %}
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+{# {{ govukTable({
+  caption: "Prototypes",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Prototype"
+    },
+    {
+      text: "View"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "RB - Responsible Body flow"
+      },
+      {
+        text: ""
+      }
+    ],
+    [
+      {
+        text: "School Users flow"
+      },
+      {
+        text: ""
+      }
+    ]
+  ]
+}) }} #}
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Prototypes</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Prototype</th>
+      <th scope="col" class="govuk-table__header">View</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header" style="vertical-align: middle">RB - Responsible Body flow</th>
+      <td class="govuk-table__cell">
+      <a class="govuk-button" disabled href="#" style="margin: 0">
+        View
+        </a>
+    </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header" style="vertical-align: middle">School Users flow</th>
+      <td class="govuk-table__cell"><a class="govuk-button" href="school-privacy-notice" style="margin: 0">
+        View
+        </a></td>
+    </tr>
+  </tbody>
+</table>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
-      </ul>
+<br><br>
+      <h2 class="govuk-heading-m">Prototype change log</h2>
+      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "17/9/2021"
+      },
+      value: {
+        text: "Chromebook journey improvements"
+      },
+      actions: {
+        items: [
+          {
+            href: "ghwt-schools-chromebook",
+            text: "View",
+            visuallyHiddenText: "view"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "15/9/2021"
+      },
+      value: {
+        text: "Heroku setup for prototype initiated"
+      },
+      actions: {
+        items: [
+          {
+            href: "",
+            text: "",
+            visuallyHiddenText: "view"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "14/9/2021"
+      },
+      value: {
+        html: "GDS Prototype repo cloned"
+      },
+      actions: {
+        items: [
+          {
+            href: "",
+            text: "",
+            visuallyHiddenText: "view"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
     </div>
   </div>
+
+
+
 
 {% endblock %}

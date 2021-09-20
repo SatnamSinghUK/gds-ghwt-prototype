@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/form-handler" method="post" novalidate>
+      {{ govukInput({
+        label: {
+          text: "School or local authority email domain registered for G Suite for Education",
+          isPageHeading: true,
+          classes: "govuk-label--l"
+        },
+        classes: "govuk-input--width-10",
+        id: "postcode",
+        name: "postcode",
+        autocomplete: "postal-code"
+      }) }}
+
+    {{ govukButton({
+        text: "Add another"
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    </form>
+  </div>
+</div>
+{% endblock %}
