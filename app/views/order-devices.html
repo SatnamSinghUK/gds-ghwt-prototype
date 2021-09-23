@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "#"
+},
+{
+text: "Get laptops and tablets",
+href: "#"
+},
+{
+text: "Order devices",
+href: "#"
+}
+]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Order devices</h1>
+
+        {% from "govuk/components/table/macro.njk" import govukTable %}
+        {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+        <h2 class="govuk-heading-m">Schools you can place orders for</h2>
+
+        {{ govukTable({
+        caption: "",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: true,
+        head: [
+        {
+        text: "School",
+        classes: ''
+        },
+        {
+        text: "What to order"
+        }
+        ],
+        rows: [
+        [
+        {
+        html: "<a href='#'>Arden (URN:136333)</a>"
+        },
+        {
+        html: "Order 10 routers and 100 devices <br> <span class='govuk-hint'>You've ordered 0 routers and 0
+            devices</span>"
+        }
+
+        ],
+        [
+        {
+        html: "<a href='#'>Henley in Arden School (URN:136991)</a>"
+        },
+        {
+        html: "Order 10 routers and 100 devices <br> <span class='govuk-hint'>You've ordered 0 routers and 0
+            devices</span>"
+        }
+
+        ],
+        [
+        {
+        html: "<a href='#'>Lode Heath School (URN:137008)</a>"
+        },
+        {
+        html: "Order 52 routers and 100 devices <br> <span class='govuk-hint'>You've ordered 0 routers and 0
+            devices</span>"
+        }
+
+        ],
+        [
+        {
+        html: "<a href='#'>Park Hall Academy (URN:135971)</a>"
+        },
+        {
+        html: "Order 0 routers and 34 devices <br> <span class='govuk-hint'>You've ordered 0 routers and 0
+            devices</span>"
+        }
+
+        ]
+        ]
+        }) }}
+
+        <h2 class="govuk-heading-m govuk-!-padding-top-4">Helping signing in to TechSource</h2>
+
+        <h3 class="govuk-heading-s">Using TechSource for the first time</h3>
+
+        <p class="govuk-body">Use these details to sign in:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li><strong>User ID:</strong> trust@trust.com</li>
+            <li><strong>Password:</strong> Use the 'Forgotten password?' link to set a password the first time you sign
+                in</li>
+        </ul>
+
+        {{ govukButton({
+        text: "Start now",
+        href: "#",
+        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-2",
+        isStartButton: true
+        }) }}
+        <p class="govuk-body">on the TechSource website</p>
+
+
+    </div>
+
+
+
+</div>
+{% endblock %}

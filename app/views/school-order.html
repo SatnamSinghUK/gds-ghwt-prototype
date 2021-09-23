@@ -1,0 +1,178 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Get laptops and tablets",
+      href: "#"
+    },
+    {
+      text: "Your schools and colleges",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+    
+        <h1 class="govuk-heading-xl">Your schools and colleges</h1>
+        {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{{ govukDetails({
+  summaryText: "Is this list wrong?",
+  text: "Prototype placeholder text..."
+}) }}
+
+        {% from "govuk/components/table/macro.njk" import govukTable %}
+        {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+<h2 class="govuk-heading-m">Schools and colleges that can order</h2>
+
+{{ govukTable({
+  caption: "",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "School or college",
+      classes: 'govuk-!-width-one-half'
+    },
+    {
+      text: "Who will order?"
+    },
+    {
+      text: "Allocation"
+    },
+    {
+      text: ""
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<a href='#'>Alfriston School (114385)</a> <br> Primary school"
+      },
+      {
+        html: "School or college"
+      },
+      {
+        html: "100 devices <br> 3 routers"
+      },
+      {
+        html: "<strong class='govuk-tag govuk-tag--yellow'>SCHOOL CONTACTED</strong>"
+      }
+      
+    ]
+  ]
+}) }}
+
+        <h2 class="govuk-heading-m">Schools and colleges that cannot order yet</h2>
+
+        <p class="govuk-body">Ordering will be opened for these schools and colleges as soon as possible</p>
+
+        {{ govukTable({
+  caption: "",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "School or college",
+      classes: 'govuk-!-width-one-half'
+    },
+    {
+      text: "Who will order?"
+    },
+    {
+      text: "Allocation"
+    },
+    {
+      text: ""
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<a href='#'>All Saints Church of England Primary School Bexhill (114491)</a> <br> Primary school"
+      },
+      {
+        html: "School or college"
+      },
+      {
+        html: "0 devices <br> 0 routers"
+      },
+      {
+        html: "<strong class='govuk-tag govuk-tag--grey'>NEEDS A CONTACT</strong>"
+      }
+    ],
+    [
+      {
+        html: "<a href='#'>All Saints' and St Richard's Church of England Primary School (114554)</a> <br> Primary school"
+      },
+      {
+        html: "School or college"
+      },
+      {
+        html: "0 devices <br> 0 routers"
+      },
+      {
+        html: "<strong class='govuk-tag govuk-tag--grey'>NEEDS A CONTACT</strong>"
+      }
+    ],
+    [
+      {
+        html: "<a href='#'>Ashdown Primary School (114392)</a> <br> Primary school"
+      },
+      {
+        html: "School or college"
+      },
+      {
+        html: "0 devices <br> 0 routers"
+      },
+      {
+        html: "<strong class='govuk-tag govuk-tag--grey'>NEEDS A CONTACT</strong>"
+      }
+    ],
+    [
+      {
+        html: "<a href='#'>Barcombe Church of England Primary</a> <br> Primary school"
+      },
+      {
+        html: "School or college"
+      },
+      {
+        html: "0 devices <br> 0 routers"
+      },
+      {
+        html: "<strong class='govuk-tag govuk-tag--grey'>NEEDS A CONTACT</strong>"
+      }
+    ]
+    
+  ]
+}) }}
+
+        {{ govukButton({
+        text: "Start now",
+        href: "#",
+        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+        isStartButton: true
+        }) }}
+
+    </div>
+
+    
+
+</div>
+{% endblock %}
