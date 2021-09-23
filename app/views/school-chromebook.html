@@ -4,35 +4,29 @@
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{% block beforeContent %}
+{# {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
     href: "index"
   }) }}
-{% endblock %}
+{% endblock %} #}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Are you ordering Chromebooks?</h1>
       <form action="/form-handler" method="post" novalidate>
 
         {{ govukRadios({
-          idPrefix: "where-do-you-live",
-          name: "where-do-you-live",
-          fieldset: {
-            legend: {
-              text: "Will you order Chromebooks?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
-            }
-          },
+          idPrefix: "are-you-ordering-chromebooks",
+          name: "are-you-ordering-chromebooks",
           hint: {
             text: "If you're going to order Google Chromebooks, we need information to configure them before you place your order"
           },
           items: [
             {
               value: "yes",
-              text: "Yes, we will need Chromebooks"
+              text: "Yes, we'll need Chromebooks"
             },
             {
               value: "no",
@@ -40,16 +34,26 @@
             },
             {
               value: "know",
-              text: "I don't know"
+              text: "Not sure"
             }
           ]
         }) }}
 
         {{ govukButton({
           text: "Continue",
-          href: "school-end"
+          href: "school-chromebook-yes"
         }) }}
       </form>
     </div>
   </div>
+  {# <script>
+    (function() {
+        document.getElementsByClassName('.govuk-button').onclick = function(e) {
+            e.preventDefault();
+            if(document.querySelector('input[name="are-you-ordering-chromebooks"]:checked').value == 'yes') {
+                console.log('yo');
+            }
+        }
+   })();
+  </script> #}
 {% endblock %}

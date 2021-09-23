@@ -5,13 +5,19 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">What happens next</h1>
+        {% from "govuk/components/panel/macro.njk" import govukPanel %}
+
+        {{ govukPanel({
+            titleText: "Your Done",
+            html: "You'll shortly receive an email summarising what you have completed"
+        }) }}
+
+        <h2 class="govuk-heading-l">What happens next</h2>
 
         <p class="govuk-body">You can continue to use this service to: </p>
 
         <ul class="govuk-list govuk-list--bullet">
             <li>check how many devices you can order</li>
-            <li>request extra data for mobile devices</li>
             <li>request 4G wireless routers</li>
             <li>add more users</li>
             <li>change you Chromebook settings</li>
