@@ -1,64 +1,63 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Getting help with technology
+Getting help with technology
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Getting help with technology Prototypes 2021/22
-      </h1>
-      <p>
-        This is the GHWT prototype homepage, here you will find prototypes for each user flow.
-      </p>
-      <p>The change log contains incremental updates made to the prototypes</p>
+        <h1 class="govuk-heading-xl">
+            Getting help with technology Prototypes 2021/22
+        </h1>
+        <p>
+            This is the GHWT prototype homepage, here you will find prototypes for each user flow.
+        </p>
+        <p>The change log contains incremental updates made to the prototypes</p>
 
 
-<br><br>
-{% from "govuk/components/button/macro.njk" import govukButton %}
+        <br><br>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{# {{ govukButton({
-  text: "Save and continue"
-}) }} #}
-      {% from "govuk/components/table/macro.njk" import govukTable %}
+        {# {{ govukButton({
+        text: "Save and continue"
+        }) }} #}
+        {% from "govuk/components/table/macro.njk" import govukTable %}
 
-{# {{ govukTable({
-  caption: "Prototypes",
-  captionClasses: "govuk-table__caption--m",
-  firstCellIsHeader: true,
-  head: [
-    {
-      text: "Prototype"
-    },
-    {
-      text: "View"
-    }
-  ],
-  rows: [
-    [
-      {
+        {# {{ govukTable({
+        caption: "Prototypes",
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: true,
+        head: [
+        {
+        text: "Prototype"
+        },
+        {
+        text: "View"
+        }
+        ],
+        rows: [
+        [
+        {
         text: "RB - Responsible Body flow"
-      },
-      {
+        },
+        {
         text: ""
-      }
-    ],
-    [
-      {
+        }
+        ],
+        [
+        {
         text: "School Users flow"
-      },
-      {
+        },
+        {
         text: ""
-      }
-    ]
-  ]
-}) }} #}
+        }
+        ]
+        ]
+        }) }} #}
 
-<table class="govuk-table">
+        <!-- <table class="govuk-table">
   <caption class="govuk-table__caption govuk-table__caption--m">Prototypes</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
@@ -82,87 +81,167 @@
         </a></td>
     </tr>
   </tbody>
-</table>
+</table> -->
 
-<br><br>
-      <h2 class="govuk-heading-m">Prototype change log</h2>
-      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Prototype journey pages</caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Prototype page</th>
+                    <th scope="col" class="govuk-table__header">View</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">RB Chromebook question
+                    </th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="rb-chromebook" style="margin: 0">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">RB Chromebook 'Yes'</th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="rb-chromebook-yes" style="margin: 0">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">RB Order device - S1</th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="rb-order" style="margin: 0">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">RB Order device - S2</th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="rb-order-devices" style="margin: 0">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">RB Order device - S3</th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="rb-order-devices-item" style="margin: 0">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">School Chromebook
+                        question
+                    </th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="school-chromebook" style="margin: 0">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">School Chromebook 'Yes'
+                    </th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="school-chromebook-yes" style="margin: 0">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">School Order device</th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="school-order-devices-item" style="margin: 0">
+                            View
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-{{ govukSummaryList({
-  rows: [
-  {
-      key: {
+        <br><br>
+        <h2 class="govuk-heading-m">Prototype change log</h2>
+        {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+        {{ govukSummaryList({
+        rows: [
+        {
+        key: {
         text: "23/9/2021"
-      },
-      value: {
+        },
+        value: {
         text: "School order screen"
-      },
-      actions: {
+        },
+        actions: {
         items: [
-          {
-            href: "school-order",
-            text: "View",
-            visuallyHiddenText: "view"
-          }
+        {
+        href: "school-order",
+        text: "View",
+        visuallyHiddenText: "view"
+        }
         ]
-      }
-    },
-    {
-      key: {
+        }
+        },
+        {
+        key: {
         text: "22/9/2021"
-      },
-      value: {
+        },
+        value: {
         text: "Chromebook journey improvements"
-      },
-      actions: {
+        },
+        actions: {
         items: [
-          {
-            href: "school-chromebook",
-            text: "View",
-            visuallyHiddenText: "view"
-          }
+        {
+        href: "school-chromebook",
+        text: "View",
+        visuallyHiddenText: "view"
+        }
         ]
-      }
-    },
-    {
-      key: {
+        }
+        },
+        {
+        key: {
         text: "15/9/2021"
-      },
-      value: {
+        },
+        value: {
         text: "Heroku setup for prototype initiated"
-      },
-      actions: {
+        },
+        actions: {
         items: [
-          {
-            href: "",
-            text: "",
-            visuallyHiddenText: "view"
-          }
+        {
+        href: "",
+        text: "",
+        visuallyHiddenText: "view"
+        }
         ]
-      }
-    },
-    {
-      key: {
+        }
+        },
+        {
+        key: {
         text: "14/9/2021"
-      },
-      value: {
+        },
+        value: {
         html: "GDS Prototype repo cloned"
-      },
-      actions: {
+        },
+        actions: {
         items: [
-          {
-            href: "",
-            text: "",
-            visuallyHiddenText: "view"
-          }
+        {
+        href: "",
+        text: "",
+        visuallyHiddenText: "view"
+        }
         ]
-      }
-    }
-  ]
-}) }}
+        }
+        }
+        ]
+        }) }}
 
     </div>
-  </div>
+</div>
 
 
 
