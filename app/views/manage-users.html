@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Getting help with technology
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            Manage Users
+        </h1>
+        {# <p>
+            This is the GHWT prototype homepage, here you will find prototypes for each user flow.
+        </p>
+        <p>The change log contains incremental updates made to the prototypes</p> #}
+
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {# {{ govukButton({
+        text: "Save and continue"
+        }) }} #}
+
+
+
+
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Manage Users</caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Select</th>
+                    <th scope="col" class="govuk-table__header">Organisation</th>
+                    <th scope="col" class="govuk-table__header">Code</th>
+                    <th scope="col" class="govuk-table__header">Routers</th>
+                    <th scope="col" class="govuk-table__header">Devices</th>
+                    <th scope="col" class="govuk-table__header">Last Amended</th>
+                    <th scope="col" class="govuk-table__header">Action</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" style="vertical-align: middle; text-align: center">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste">
+
+                            </label>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell" style="vertical-align: middle">
+                        Ashley Tall Trees School
+                    </td>
+
+                    <td class="govuk-table__cell" style="vertical-align: middle">XXXXX-23242-XXX1325</td>
+                    <td class="govuk-table__cell" style="vertical-align: middle">0/100</td>
+                    <td class="govuk-table__cell" style="vertical-align: middle">300/1000</td>
+                    <td class="govuk-table__cell" style="vertical-align: middle">04/10/2021</td>
+                    <td class="govuk-table__cell" style="vertical-align: middle">
+                        <a class="govuk-button" href="#" style="margin: 0">
+                            Manage
+                        </a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" style="vertical-align: middle; text-align: center">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox"
+                                value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste">
+
+                            </label>
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell" style="vertical-align: middle">
+                        Ashley Tall Trees School
+                    </td>
+
+                    <td class="govuk-table__cell" style="vertical-align: middle">XXXXX-23242-XXX1325</td>
+                    <td class="govuk-table__cell" style="vertical-align: middle">0/100</td>
+                    <td class="govuk-table__cell" style="vertical-align: middle">300/1000</td>
+                    <td class="govuk-table__cell" style="vertical-align: middle">04/10/2021</td>
+                    <td class="govuk-table__cell" style="vertical-align: middle">
+                        <a class="govuk-button" href="#" style="margin: 0">
+                            Manage
+                        </a>
+                    </td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}
