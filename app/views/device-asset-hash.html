@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Getting help with technology
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Device BIOS/admin password and hardware hash
+        </h1>
+
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Device 776628</caption>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">Asset tag
+                    </th>
+                    <td class="govuk-table__cell">
+                        338669
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">Serial/IMEI</th>
+                    <td class="govuk-table__cell">
+                        776628
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+        {{ govukDetails({
+        summaryText: "Serial/IMEI (International Mobile Equipment Identity) explained",
+        text: "A unique ID number assigned to your device by the product manufacturer. You'll need this to use the
+        BIOS/admin tool, or when you submit a support ticket."
+        }) }}
+        <!-- <hr class="govuk-!-margin-bottom-9"> -->
+        <table class="govuk-table govuk-!-margin-top-6">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">BIOS password</th>
+                    <td class="govuk-table__cell">
+                        583ab9303a99
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">Admin password</th>
+                    <td class="govuk-table__cell">
+                        52a20903b951
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        {{ govukDetails({
+        summaryText: "Password terms explained",
+        html: "<h3>BIOS (Basic Input/Output System) password</h3>
+        <p>BIOS is the core processor software that boots up your device. You'll need the password if you want to reset
+            your device.</p>
+        <h3>Admin password</h3>
+        <p>Use this to sign in to your admin user account.</p>"
+        }) }}
+
+
+        <table class="govuk-table govuk-!-margin-top-6">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">Hardware hash
+                    </th>
+                    <td class="govuk-table__cell" style="word-break: break-all;">
+                        5ac277b8a61617b1422dadbe7632079fcebe7a39b9f6ff9176ebdf4bdb694d5071a1cd8d41257a04f48b2bebc7bae06cdc873dcbf7afb3341b0f435cc8676cb
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {{ govukDetails({
+        summaryText: "Hardware hash explained",
+        text: "Another unique device identifier that some manufacturers use. It's made up of details about hardware
+        components and the operating system. For GHwT it's used when responsible bodies need remote enrolment in mobile
+        device management software."
+        }) }}
+
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}
