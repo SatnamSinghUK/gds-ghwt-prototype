@@ -5,7 +5,12 @@ Getting help with technology
 {% endblock %}
 
 {% block content %}
-
+<style>
+    .govuk-table__header,
+    .govuk-table__cell {
+        border-bottom: none;
+    }
+</style>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">
@@ -39,7 +44,7 @@ Getting help with technology
         text: "A unique ID number assigned to your device by the product manufacturer. You'll need this to use the
         BIOS/admin tool, or when you submit a support ticket."
         }) }}
-        <!-- <hr class="govuk-!-margin-bottom-9"> -->
+        <hr class="govuk-!-margin-top-7 govuk-!-margin-bottom-5">
         <table class="govuk-table govuk-!-margin-top-6">
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
@@ -59,13 +64,14 @@ Getting help with technology
 
         {{ govukDetails({
         summaryText: "Password terms explained",
-        html: "<h3>BIOS (Basic Input/Output System) password</h3>
+        html: "<h3 class='govuk-heading-s'>BIOS (Basic Input/Output System) password</h3>
         <p>BIOS is the core processor software that boots up your device. You'll need the password if you want to reset
             your device.</p>
-        <h3>Admin password</h3>
+        <h3 class='govuk-heading-s'>Admin password</h3>
         <p>Use this to sign in to your admin user account.</p>"
         }) }}
 
+        <hr class="govuk-!-margin-top-7 govuk-!-margin-bottom-5">
 
         <table class="govuk-table govuk-!-margin-top-6">
             <tbody class="govuk-table__body">
