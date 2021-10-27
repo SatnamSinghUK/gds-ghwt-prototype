@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+}
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row govuk-!-margin-bottom-6">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            <span class="govuk-caption-xl">Leicestershire County Council </span>
+            Your account
+        </h1>
+
+
+        <h2 class="govuk-heading-l govuk-!-font-size-27">
+            <a class="govuk-link" href="get-devices">Get devices</a>
+        </h2>
+
+        <p class="govuk-body">Use this section to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>add school or college contacts</li>
+            <li>tell us who will place orders for schools and colleges</li>
+            <li>give school and college staff access to this service and TechSource</li>
+            <li>opt in schools and colleges to the Daily Mail’s donated devices scheme</li>
+        </ul>
+
+        <h2 class="govuk-heading-l govuk-!-font-size-27">
+            <a class="govuk-link" href="internet">Request internet access</a>
+        </h2>
+
+        <p class="govuk-body">Use this section to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>request extra data for mobile devices</li>
+            <li>check the status of your data requests</li>
+            <li>request 4G wireless routers</li>
+            <li>see your Huawei router password</li>
+        </ul>
+
+
+        <h2 class="govuk-heading-l govuk-!-font-size-27">
+            <a class="govuk-link" href="users">Manage local authority users</a>
+        </h2>
+
+        <p class="govuk-body">Use this section to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>give others in your local authority access to this service</li>
+            <li>set up accounts for your local authority to order devices</li>
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

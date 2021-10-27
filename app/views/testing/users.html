@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Manage local authority users"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Manage local authority users
+    </h1>
+
+    <p class="govuk-body">Everyone has the same level of access, they can:</p>
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+      <li>add or edit existing users</li>
+      <li>view the list of existing users</li>
+      <li>order devices for centrally managed schools and colleges</li>
+      <li>use a <a class="govuk-link" href="#">Support Portal</a> to report faults and <a class="govuk-link" href="#    ">view passwords needed to replace DfE settings</a> on Microsoft Windows devices</li>
+    </ul>
+
+    <div class="govuk-inset-text">
+      <p class="govuk-body">Do not add school or college contacts here. <a class="govuk-link" href="#">Use the schools and colleges list instead</a>.</p>
+    </div>
+
+    <a role="button" class="govuk-button" data-module="govuk-button" draggable="false" href="#">Invite a new user</a>
+
+      <div id="user-list">
+        <h2 class="govuk-heading-l">Users</h2>
+        <div class="user">
+  <h3 class="govuk-heading-m govuk-!-margin-bottom-1">Satnam Singh Rb User</h3>
+  <p class="govuk-body">
+    <a class="govuk-link" href="#">Edit user</a>
+  </p>
+  <div class="user-summary-list">
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+      <dd class="govuk-summary-list__value">
+          <p class="govuk-body">satnam.singh+rb@digital.education.gov.uk</p>
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Telephone
+        </dt>
+      <dd class="govuk-summary-list__value">
+          <p class="govuk-body"></p>
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Last sign in
+        </dt>
+      <dd class="govuk-summary-list__value">
+          <p class="govuk-body">27 Oct 10:51</p>
+      </dd>
+
+    </div>
+</dl>
+
+</div>
+
+</div>
+
+      </div>
+  </div>
+</div>
+
+
+{% endblock %}

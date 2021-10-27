@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+{% set test = true %}
+{% block pageTitle %}
+Getting help with technology
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Getting help with technology <br />
+            Testing
+        </h1>
+        <p>
+            New Testing area for GHWT, here you will find each user flow for testing.
+        </p>
+
+
+
+        <br><br>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {# {{ govukButton({
+        text: "Save and continue"
+        }) }} #}
+        {% from "govuk/components/table/macro.njk" import govukTable %}
+
+
+
+        <table class="govuk-table">
+            {# <caption class="govuk-table__caption govuk-table__caption--m">Prototype journeys</caption> #}
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">User flow</th>
+                    <th scope="col" class="govuk-table__header">View</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">RB
+                    </th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="testing/homepage" style="margin: 0">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">School
+                        <span class="nhsuk-hint" style="color: #4c6272 !important; font-weight: 400 !important;">
+                            (Not stable yet)
+                        </span>
+                    </th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="#" style="margin: 0" disabled>
+                            View
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {#
+        <br><br>
+        <h2 class="govuk-heading-m">Prototype change log</h2>
+        {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+        {{ govukSummaryList({
+        rows: [
+        {
+        key: {
+        text: "23/9/2021"
+        },
+        value: {
+        text: "School order screen"
+        },
+        actions: {
+        items: [
+        {
+        href: "school-order",
+        text: "View",
+        visuallyHiddenText: "view"
+        }
+        ]
+        }
+        },
+        {
+        key: {
+        text: "22/9/2021"
+        },
+        value: {
+        text: "Chromebook journey improvements"
+        },
+        actions: {
+        items: [
+        {
+        href: "school-chromebook",
+        text: "View",
+        visuallyHiddenText: "view"
+        }
+        ]
+        }
+        },
+        {
+        key: {
+        text: "15/9/2021"
+        },
+        value: {
+        text: "Heroku setup for prototype initiated"
+        },
+        actions: {
+        items: [
+        {
+        href: "",
+        text: "",
+        visuallyHiddenText: "view"
+        }
+        ]
+        }
+        },
+        {
+        key: {
+        text: "14/9/2021"
+        },
+        value: {
+        html: "GDS Prototype repo cloned"
+        },
+        actions: {
+        items: [
+        {
+        href: "",
+        text: "",
+        visuallyHiddenText: "view"
+        }
+        ]
+        }
+        }
+        ]
+        }) }} #}
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

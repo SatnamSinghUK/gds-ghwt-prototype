@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% set test = true %}
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-bottom-6">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            You’re signed in as Leicestershire County Council
+        </h1>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+        text: "Continue",
+        href: "your-account",
+        isStartButton: false
+        }) }}
+    </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% set test = true %}
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-bottom-6">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Sign in
+        </h1>
+        <div class="govuk-form-group"><label for="sign-in-token-form-email-address-field"
+                class="govuk-label govuk-label--s">Email address</label><span class="govuk-hint"
+                id="sign-in-token-form-email-address-hint">Enter your email address, and if you have an account, we’ll
+                send you a link to sign in.</span><input id="sign-in-token-form-email-address-field" class="govuk-input"
+                aria-describedby="sign-in-token-form-email-address-hint" required="required" type="email"
+                name="sign_in_token_form[email_address]"></div>
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    Change email address for your account
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+
+                <p>
+                    A colleague with access to the service can update your email address for you. If a colleague cannot
+                    do this, you can <a class="govuk-link"
+                        href="mailto:COVID.TECHNOLOGY@education.gov.uk?subject=Change%20my%20email%20address">contact
+                        us</a> to change it instead.
+                </p>
+
+            </div>
+        </details>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+        text: "Continue",
+        href: "check-email",
+        isStartButton: false
+        }) }}
+    </div>
+</div>
+
+
+
+
+{% endblock %}

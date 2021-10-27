@@ -1,0 +1,201 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Get devices",
+href: "get-devices"
+},
+{
+text: "Order devices"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Order devices
+        </h1>
+
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                We’re now permanently out of stock of all laptops and tablets. If you have an allocation of routers,
+                you can still order 4G routers until 30 June. If you need an allocation of routers please see our
+                guidance
+                <a class="govuk-link" href="#">here</a>.
+                If you’ve previously ordered DfE Restricted Windows laptops you must reset them
+                before security software expires on 30 September 2021.
+                You can reset your devices
+                <a class="govuk-link" href="#">here</a>.
+            </strong>
+        </div>
+
+
+
+
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="app-card app-card__order">
+            <h2 class="govuk-!-margin-0 govuk-!-margin-bottom-6">
+                <span class="govuk-heading-s govuk-!-margin-bottom-1 govuk-!-font-size-24">
+                    Leicestershire County Council has: </span>
+                <span class="govuk-panel__title govuk-!-font-size-36">
+                    194 devices and <br>22 routers available to order </span>
+            </h2>
+
+            <div class="govuk-panel__body govuk-!-font-size-24">
+                You ordered 159 devices and 47 routers </div>
+
+        </div>
+
+        <h2 class="govuk-heading-m">
+            Ordering deadline and what’s in stock
+        </h2>
+
+        <p class="govuk-body">
+            Orders must be placed before 4pm on Wednesday 30 June.
+        </p>
+
+        <p class="govuk-body">
+            You can see which types of device are currently in stock when you sign in to TechSource.
+        </p>
+
+        <p class="govuk-body">
+            If you order DfE Restricted Windows laptops - <a class="govuk-link" href="#">find
+                out how to reset them before security software expires on 30 September 2021</a>.
+        </p>
+
+        <p class="govuk-body">
+            <a class="govuk-link" href="#">Read more about the devices and specifications
+                that may be available.</a>
+        </p>
+
+        <p class="govuk-body">
+            Most devices will be delivered within 5 working days.
+        </p>
+
+
+        <h2 class="govuk-heading-m">
+            Before you order
+        </h2>
+        <p class="govuk-body">
+            Make sure you’re certain of what devices you need, as amending or cancelling an order will cause delays.
+        </p>
+        <p class="govuk-body">
+            It may help to:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" href="#">check device specifications</a></li>
+            <li>
+                <a class="govuk-link" href="#">give someone else access so they can place
+                    orders</a>
+            </li>
+        </ul>
+
+        <h2 class="govuk-heading-m">
+            How to order
+        </h2>
+        <p class="govuk-body">
+            You need to place orders on a website called TechSource.
+        </p>
+        <p class="govuk-body">
+            If you try to order more than 194 devices and 22 routers the order will be cancelled.
+        </p>
+        <p class="govuk-body">For large orders (more than 150 devices), we’ll call your delivery contact to arrange
+            delivery.</p>
+        <p class="govuk-body">
+            Most devices will be delivered within 5 working days of an order being confirmed, subject to stock
+            availability.
+        </p>
+        <h3 class="govuk-heading-s">
+            Combining allocations into one order
+        </h3>
+        <p class="govuk-body">
+            You can combine allocations for all your schools and colleges, and have all devices delivered to one
+            location. If you want devices delivered directly to different locations, place a separate order for each
+            delivery address.
+        </p>
+        <p class="govuk-body">
+            When using TechSource, you will be asked for a URN. Use any URN for one of the schools or colleges you
+            manage.
+        </p>
+
+
+        <h3 class="govuk-heading-s">Using TechSource for the first time</h3>
+
+        <p class="govuk-body">Use these details to sign in:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>User ID: satnam.singh+rb@digital.education.gov.uk</li>
+            <li>Password: Use the ‘Forgotten password?’ link to set a password the first time you sign in</li>
+        </ul>
+
+
+        <h3 class="govuk-heading-s">How to order 4G routers in Techsource</h3>
+
+        <ol class="govuk-list govuk-list--number">
+            <li>
+                Click on the magnifying glass icon in the top right corner of the screen.
+            </li>
+            <li>
+                Type ‘4G wireless routers’ into the search box and press ‘enter’ on your keyboard.
+            </li>
+            <li>
+                Enter the number of routers you want to order (up to 22) and click ‘Add to basket’.
+            </li>
+        </ol>
+
+        <a class="govuk-button govuk-button--start govuk-!-margin-bottom-3, govuk-!-margin-top-7"
+            data-module="govuk-button" draggable="false" href="#">Start now
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
+                viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+            </svg></a>
+        <p class="govuk-body-s">on TechSource in a new window</p>
+
+    </div>
+</div>
+<style>
+    .app-card {
+        background-color: #f3f2f1;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        font-family: GDS Transport, arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+</style>
+
+{% endblock %}

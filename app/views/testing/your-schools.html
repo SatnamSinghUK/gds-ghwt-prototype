@@ -1,0 +1,209 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Get devices",
+href: "get-devices"
+},
+{
+text: "Your schools and colleges"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
+            Your schools and colleges
+        </h1>
+
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    Is this list wrong?
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+
+                <p>This is a list of all local authority maintained and special schools.</p>
+                <p>Email <a class="govuk-link"
+                        href="mailto:COVID.TECHNOLOGY@education.gov.uk?subject=Problem%20with%20list%20of%20schools">COVID.TECHNOLOGY@education.gov.uk</a>
+                    and tell us what to&nbsp;change.</p>
+
+            </div>
+        </details>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="app-card app-card__order">
+            <h2 class="govuk-!-margin-0 govuk-!-margin-bottom-6">
+                <span class="govuk-heading-s govuk-!-margin-bottom-1 govuk-!-font-size-24">
+                    Leicestershire County Council has: </span>
+                <span class="govuk-panel__title govuk-!-font-size-36">
+                    194 devices and <br>22 routers available to order </span>
+            </h2>
+
+            <div class="govuk-panel__body govuk-!-font-size-24">
+                You ordered 159 devices and 47 routers </div>
+
+            <a role="button" class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-1"
+                data-module="govuk-button" draggable="false" href="order-devices">Order
+                devices</a>
+        </div>
+
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margine-top-4">
+        <h3 class="govuk-heading-m">Schools and colleges that can order</h3>
+    </div>
+</div>
+<table id="ordering-schools" class="govuk-table">
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header app-schools-table__column-40">School or college</th>
+            <th class="govuk-table__header app-schools-table__column-20">Who will order?</th>
+            <th class="govuk-table__header app-schools-table__column-20">Allocation</th>
+            <th class="govuk-table__header app-schools-table__column-20"><span
+                    class="govuk-visually-hidden">Status</span></th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school-order">Brookville High (100306)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell">
+                86&nbsp;devices<br>10&nbsp;routers
+
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school-order">Iceborough Secondary College
+                    (100305)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell">
+                57&nbsp;devices<br>12&nbsp;routers
+
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school-order">Marblewald High (100304)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell">
+                55&nbsp;devices<br>20&nbsp;routers
+
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school-order">Ostbarrow High (100308)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell">
+                69&nbsp;devices<br>13&nbsp;routers
+
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school-order">Vertapple Secondary College
+                    (100303)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell">
+                86&nbsp;devices<br>14&nbsp;routers
+
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<style>
+    .app-card {
+        background-color: #f3f2f1;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        font-family: GDS Transport, arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+</style>
+
+
+
+{% endblock %}
