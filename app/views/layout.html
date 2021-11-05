@@ -41,6 +41,43 @@ Get help with technology
 
 {% block header %}
 {# Set serviceName in config.js. #}
+<style>
+    .app-banner {
+        color: #0b0c0c;
+        padding: 15px;
+        margin-bottom: 30px;
+        border: 5px solid #00703c;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    .app-banner h2 {
+        margin-bottom: 0;
+    }
+
+    .app-related__list,
+    .app-table-of-contents ul,
+    .govuk-list {
+        margin-bottom: 20px;
+        font-size: 1.1875rem;
+        line-height: 1.3157894737;
+    }
+
+    .app-table-of-contents ul>li,
+    .govuk-list--bullet>li,
+    .govuk-list--number>li {
+        margin-bottom: 5px;
+    }
+
+    .app-emphasis-link {
+        display: inline-block;
+        padding: 10px 20px 10px 16px;
+        border-left: 4 px solid #505a5f;
+        background-color: #f3f2f1;
+        font-weight: 700;
+        text-decoration: none;
+    }
+</style>
 {{ govukHeader({
 homepageUrl: "/",
 serviceName: serviceName,
@@ -54,9 +91,9 @@ containerClasses: "govuk-width-container"
         <div class="govuk-phase-banner app-phase-banner app-width-container">
             <p class="govuk-phase-banner__content">
                 {% if test %}
-                <strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--orange">
-                    test
-                </strong>
+                <a href="/testing"><strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--orange">
+                        test
+                    </strong></a>
                 {% else %}
                 <strong class="govuk-tag govuk-phase-banner__content__tag">
                     alpha

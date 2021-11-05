@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Laptops and tablets"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Laptops and tablets
+        </h1>
+
+        <p class="govuk-body">
+            Find out how to safely set up laptops and tablets for pupils in <span class="app-no-wrap">years 3 to
+                13</span>,
+            students in further education, and care leavers. You can also find out how to manage devices you’ve already
+            received.
+        </p>
+
+        <h2 class="govuk-heading-m">
+            How to set up laptops and tablets
+        </h2>
+
+        <ul class="govuk-list govuk-list--spaced govuk-!-margin-bottom-7">
+            <li><a class="govuk-link" href="/devices/preparing-a-standard-windows-device">Preparing Microsoft Windows
+                    laptops and tablets</a></li>
+            <li><a class="govuk-link" href="/devices/preparing-chromebooks">Google Chromebooks setup guide</a></li>
+            <li><a class="govuk-link" href="/devices/preparing-ipads">Apple iPads setup guide</a></li>
+            <li><a class="govuk-link" href="/devices/google-domain-for-care-leavers-and-children-with-social-worker">How
+                    to set up a Google domain for care leavers</a></li>
+
+        </ul>
+
+        <h2 class="govuk-heading-m">
+            Replacing faulty devices
+        </h2>
+
+        <ul class="govuk-list govuk-list--spaced govuk-!-margin-bottom-7">
+            <li><a class="govuk-link" href="/devices/replace-a-faulty-device">Replace faulty devices</a></li>
+
+        </ul>
+
+        <h2 class="govuk-heading-m">
+            Resetting and safeguarding devices
+        </h2>
+
+        <ul class="govuk-list govuk-list--spaced govuk-!-margin-bottom-7">
+            <li><a class="govuk-link" href="/devices/guide-to-resetting-windows-laptops-and-tablets">Guide to resetting
+                    windows laptops and tablets</a></li>
+            <li><a class="govuk-link" href="/devices/remove-dfe-provided-cisco-umbrella-from-chromebooks">Remove
+                    DfE-provided Cisco Umbrella from Chromebooks</a></li>
+            <li><a class="govuk-link" href="/devices/safeguarding-for-device-users">Safeguarding devices</a></li>
+
+        </ul>
+
+        <h2 class="govuk-heading-m">
+            About the devices provided by DfE
+        </h2>
+
+        <ul class="govuk-list govuk-list--spaced govuk-!-margin-bottom-7">
+            <li><a class="govuk-link" href="/devices/about-the-offer">Who can get laptops and tablets, and why DfE
+                    provides them</a></li>
+            <li><a class="govuk-link" href="/devices/device-allocations">How laptops and tablets are allocated</a></li>
+            <li><a class="govuk-link" href="/devices/device-specification">Device types and IT settings</a></li>
+            <li><a class="govuk-link" href="/devices/device-distribution-and-ownership">Who owns the devices</a></li>
+
+        </ul>
+    </div>
+</div>
+
+
+{% endblock %}

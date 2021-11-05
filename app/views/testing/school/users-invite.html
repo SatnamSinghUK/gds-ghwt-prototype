@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Manage users",
+href: "users"
+},
+{
+text: "Invite a new user"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Invite a new user
+        </h1>
+
+        <p class="govuk-body">Invite someone in your school or college who:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+            <li>understands what devices are needed and who’ll get them</li>
+            <li>can configure devices or give technical information.</li>
+        </ul>
+
+        <h2 class="govuk-heading-s">
+            Get consent for us to share their information
+        </h2>
+        <p class="govuk-body">
+            When you invite someone, their name, email address and <span class="app-no-wrap">phone number</span> will be
+            shared with our delivery partner. Before you invite them:
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+            <li>
+                give them this <a class="govuk-link" href="/privacy/general-privacy-notice">notice on how we look after
+                    personal information</a>
+            </li>
+            <li>
+                get consent for their details to be shared.
+            </li>
+        </ul>
+
+        <form class="new_user" id="new_user" action="/schools/100070/users" accept-charset="UTF-8" method="post"><input
+                type="hidden" name="authenticity_token"
+                value="hcc3hRc/aDBAK81SATvZA0NDZMxoHhhouxiMZpqRfDxeQHPP0M7yKO86PyhAJhAyl3f8t8f8ordMcS9ZOjP1gg==">
+
+
+            <div class="govuk-form-group"><label for="user-full-name-field"
+                    class="govuk-label govuk-label--m">Name</label><input id="user-full-name-field" class="govuk-input"
+                    type="text" name="user[full_name]"></div>
+
+            <div class="govuk-form-group"><label for="user-email-address-field" class="govuk-label govuk-label--m">Email
+                    address</label><input id="user-email-address-field" class="govuk-input" type="email"
+                    name="user[email_address]"></div>
+
+            <div class="govuk-form-group"><label for="user-telephone-field" class="govuk-label govuk-label--m">Telephone
+                    number</label><input id="user-telephone-field" class="govuk-input govuk-input--width-10" type="text"
+                    name="user[telephone]"></div>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="user-orders-devices-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Do you want to give them access to
+                        the TechSource website for ordering?</legend><input value="" type="hidden"
+                        name="user[orders_devices]" id="user_orders_devices"><span class="govuk-hint"
+                        id="user-orders-devices-hint">No more than 3 users will be allowed to place orders.</span>
+                    <div class="govuk-radios govuk-!-margin-top-3" data-module="govuk-radios">
+                        <div class="govuk-radios__item"><input id="user-orders-devices-1-field"
+                                class="govuk-radios__input" type="radio" value="1" name="user[orders_devices]"><label
+                                for="user-orders-devices-1-field"
+                                class="govuk-label govuk-label--s govuk-radios__label">Yes, give them access to the
+                                TechSource website for ordering</label></div>
+                        <div class="govuk-radios__item"><input id="user-orders-devices-0-field"
+                                class="govuk-radios__input" type="radio" value="0" name="user[orders_devices]"><label
+                                for="user-orders-devices-0-field"
+                                class="govuk-label govuk-label--s govuk-radios__label">No</label></div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button"
+                data-prevent-double-click="true">Send invite</button>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account"
+}
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            <span class="govuk-caption-xl">Mallowtown High School</span>
+            Your account
+        </h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop govuk-grid-column-full">
+        <style>
+            .app-card {
+                background-color: #f3f2f1;
+                display: block;
+                text-decoration: none;
+                font-family: GDS Transport, arial, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-weight: 400;
+                font-size: 16px;
+                font-size: 1rem;
+                line-height: 1.25;
+                font-size: 1.1875rem;
+                line-height: 1.3157894737;
+                padding: 20px;
+            }
+        </style>
+        <div id="tranche_allocation" class="app-card govuk-!-margin-bottom-4">
+            <h2 id="total_allocation_sentence" class="govuk-heading-l">
+                Mallowtown High School has a total allocation of 0 devices for academic year 2021/22.
+            </h2>
+
+            <h2>You can order 4G routers.</h2>
+
+            <h2 id="ordered_sentence">
+                You’ve received 0 devices and 0 routers in academic year 2021/22.
+            </h2>
+
+            <div id="current_tranche">
+                <div class="govuk-warning-text govuk-!-margin-bottom-0"><span class="govuk-warning-text__icon"
+                        aria-hidden="true">!</span><strong class="govuk-warning-text__text"><span
+                            class="govuk-warning-text__assistive">Warning</span>These allocations are for the current
+                        winter 2021 Get help with tech programme. Devices received before 30 September 2021 are not
+                        included here.</strong></div>
+            </div>
+        </div>
+
+
+        <h2 class="govuk-heading-l govuk-!-font-size-27">
+            <a class="govuk-link" href="order-devices">Order devices and routers</a>
+        </h2>
+
+        <p class="govuk-body">Use this section to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>order laptops and 4G routers</li>
+            <li>access the TechSource website to order devices.</li>
+        </ul>
+
+        <h2 class="govuk-heading-l govuk-!-font-size-27">
+            <a class="govuk-link" href="internet">Manage 4G routers</a>
+        </h2>
+
+        <p class="govuk-body">Use this section to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>manage 4G routers</li>
+            <li>see your Huawei router password.</li>
+        </ul>
+
+        <h2 class="govuk-heading-l govuk-!-font-size-27">
+            <a class="govuk-link" href="details">Check your organisation’s details</a>
+        </h2>
+
+        <p class="govuk-body">Use this section to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>review your allocation</li>
+            <li>review your Chromebook settings.</li>
+        </ul>
+
+        <h2 class="govuk-heading-l govuk-!-font-size-27">
+            <a class="govuk-link" href="users">Manage users</a>
+        </h2>
+
+        <p class="govuk-body">Use this section to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>give other people access to this service</li>
+            <li>set which accounts can use TechSource to order.</li>
+        </ul>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

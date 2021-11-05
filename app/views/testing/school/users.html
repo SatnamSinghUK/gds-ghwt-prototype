@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Manage users"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="app-banner app-banner--success" aria-labelledby="success-message" data-module="govuk-error-summary"
+    tabindex="-1" role="alert">
+    <div class="app-banner__message">
+        <h2 class="govuk-heading-m" id="success-message">
+            We’ve saved your changes
+        </h2>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Manage users
+        </h1>
+        <p class="govuk-body">Everyone with access can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>see who else has an account</li>
+            <li>add or edit existing accounts.</li>
+        </ul>
+
+        <p class="govuk-body govuk-!-margin-top-6">You can also choose to let up to 3 users:</p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+            <li>
+                order devices
+            </li>
+            <li>
+                use the Get help with Technology service to
+                <a class="govuk-link" href="/get-support">report faults</a>
+                and
+                <a class="govuk-link" href="/assets">view passwords needed to replace DfE settings</a>.
+            </li>
+        </ul>
+
+        <a role="button" class="govuk-button" data-module="govuk-button" draggable="false" href="users-invite">Invite a
+            new user</a>
+        <div id="user-list">
+            <h2 class="govuk-heading-l">Users</h2>
+            <div class="user">
+                <h3 class="govuk-heading-m govuk-!-margin-bottom-1">Satnam Singh School User</h3>
+                <div class="user-summary-list">
+                    <dl class="govuk-summary-list">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Email address
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">satnam.singh+school@digital.education.gov.uk</p>
+                            </dd>
+
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link govuk-!-display-none-print" href="users-edit">
+                                    Change<span class="govuk-visually-hidden"> Satnam Singh School User</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Telephone
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body"></p>
+                            </dd>
+
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link govuk-!-display-none-print" href="users-edit">
+                                    Change<span class="govuk-visually-hidden"> Satnam Singh School User</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Last sign-in
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">05 Nov 08:51</p>
+                            </dd>
+
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link govuk-!-display-none-print" href="users-edit">
+                                    Change<span class="govuk-visually-hidden"> Satnam Singh School User</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                Can order devices?
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <p class="govuk-body">Yes</p>
+                            </dd>
+
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link govuk-!-display-none-print" href="users-edit">
+                                    Change<span class="govuk-visually-hidden"> Satnam Singh School User</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

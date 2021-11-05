@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Do you want donated devices?"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Do your schools and colleges want donated devices?</h1>
+
+        <h2 class="govuk-heading-m">The Daily Mail’s Computers For Kids scheme</h2>
+
+        <p class="govuk-body">Mail Force, a charity created by the Daily Mail, are running a Computers For Kids scheme.
+        </p>
+
+        <p class="govuk-body">They are collecting:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>donations to buy new devices</li>
+            <li>used laptops donated by companies</li>
+        </ul>
+
+        <p class="govuk-body">These devices are being checked, refurbished if used, and distributed to schools and
+            colleges by Computacenter.</p>
+
+        <p class="govuk-body">You can use this service to opt schools and colleges in to receive these devices.</p>
+        <p class="govuk-body">This is not a Department for Education offer and no device support will be available.
+            There’s no guarantee schools or colleges will receive any devices.</p>
+
+        <form class="new_donated_device_interest_form" id="new_donated_device_interest_form"
+            action="/responsible-body/donated-devices/interest" accept-charset="UTF-8" method="post"><input
+                type="hidden" name="authenticity_token"
+                value="i4wP2Tvtl3xgzNdN/DUGBDTfQMYWoQP7iWmlrJ3jDIfhcsgGX9356mfbeNm7GRZgpS1gSiztGjVaI8pDkRnI/A==">
+
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Are you interested in this scheme?
+                    </legend><input value="" type="hidden" name="donated_device_interest_form[device_interest]"
+                        id="donated_device_interest_form_device_interest">
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item"><input
+                                id="donated-device-interest-form-device-interest-yes-field" class="govuk-radios__input"
+                                type="radio" value="yes" name="donated_device_interest_form[device_interest]"><label
+                                for="donated-device-interest-form-device-interest-yes-field"
+                                class="govuk-label govuk-radios__label">Yes, tell me more</label></div>
+                        <div class="govuk-radios__item"><input
+                                id="donated-device-interest-form-device-interest-no-field" class="govuk-radios__input"
+                                type="radio" value="no" name="donated_device_interest_form[device_interest]"><label
+                                for="donated-device-interest-form-device-interest-no-field"
+                                class="govuk-label govuk-radios__label">No, not at the moment</label></div>
+                    </div>
+                </fieldset>
+            </div>
+            <a role="button" class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-1"
+                data-module="govuk-button" draggable="false" href="#">Continue</a>
+        </form>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
