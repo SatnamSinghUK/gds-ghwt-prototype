@@ -82,7 +82,14 @@ Get help with technology
 homepageUrl: "/",
 serviceName: serviceName,
 serviceUrl: "/",
-containerClasses: "govuk-width-container"
+containerClasses: "govuk-width-container",
+navigation: [
+    {
+      href: "#",
+      text: "Sign in",
+      active: false
+    }
+  ]
 }) }}
 
 <div class="govuk-width-container">
@@ -120,12 +127,20 @@ containerClasses: "govuk-width-container"
 meta: {
 items: [
 {
-href: "https://govuk-prototype-kit.herokuapp.com/",
-text: "GOV.UK Prototype Kit " + releaseVersion
+href: "https://staging-get-help-with-tech.education.gov.uk/get-support",
+text: "Contact us"
 },
 {
-href: "/prototype-admin/clear-data",
-text: "Clear data"
+href: "https://staging-get-help-with-tech.education.gov.uk/accessibility",
+text: "Accessibility"
+},
+{
+href: "https://staging-get-help-with-tech.education.gov.uk/privacy",
+text: "Privacy"
+},
+{
+href: "https://staging-get-help-with-tech.education.gov.uk/cookie-preferences",
+text: "Cookies"
 }
 ]
 }

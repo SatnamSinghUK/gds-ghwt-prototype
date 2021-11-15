@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Get support"
+}
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  Get support
+</h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body govuk-!-margin-bottom-7">
+      We’re here to answer any queries you have about the Get help with technology programme. To
+      help us respond to you more quickly (within 3 working days), please answer a few questions.
+      These should take no longer than 5 minutes.
+    </p>
+
+    <a role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button" href="/get-support/describe-yourself">Start now<svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" focusable="false" aria-hidden="true"><path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path></svg></a>
+
+    <p class="govuk-body govuk-!-margin-top-3">
+      If you’d rather not answer these questions, you can email <a href="mailto:COVID.TECHNOLOGY@education.gov.uk" class="govuk-link">COVID.TECHNOLOGY@education.gov.uk</a>
+      instead. We’ll still aim to respond to you within 3 working days.
+    </p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="help-guides">
+        Most viewed help guides
+      </h2>
+      <!-- @TODO NEED TRACKING FOR THESE LINKS ? -->
+      <nav role="navigation" aria-labelledby="help-guides">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="/devices/guide-to-resetting-windows-laptops-and-tablets">How to reset Windows laptops and tablets</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/devices/guide-to-resetting-windows-laptops-and-tablets/get-local-admin-and-bios-passwords">Get local admin and BIOS passwords</a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/devices/managing-your-4g-wireless-routers">How to reset your wireless router</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+
+{% endblock %}
