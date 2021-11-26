@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Order devices and routers",
+href: "devices"
+},
+{
+text: "Your schools and colleges",
+href: "your-schools"
+},
+{
+text: "Brighthurst Secondary College"
+}
+]
+}) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Brighthurst Secondary College
+        </h1>
+
+        <p class="govuk-body"><a class="govuk-link" href="order-devices">Order devices now</a></p>
+    </div>
+</div>
+<div class="govuk-!-padding-top-0 govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+    <div class="school-details-summary-list">
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Status
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+                </dd>
+
+                <span class="govuk-summary-list__actions"></span>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Who will order?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">The local authority orders devices</p>
+                </dd>
+
+                <span class="govuk-summary-list__actions"></span>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Device allocation
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">0 devices</p>
+                </dd>
+
+                <span class="govuk-summary-list__actions"></span>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Can place orders?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">Yes, a closure or group of self-isolating children has been reported</p>
+                </dd>
+
+                <span class="govuk-summary-list__actions"></span>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Setting
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">Other</p>
+                </dd>
+
+                <span class="govuk-summary-list__actions"></span>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Ordering Chromebooks?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">Not yet known</p>
+                </dd>
+
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-!-display-none-print" href="#">
+                        Change<span class="govuk-visually-hidden"> whether Chromebooks are needed</span>
+                    </a>
+                </dd>
+            </div>
+        </dl>
+
+    </div>
+
+</div>
+<p class="govuk-body">
+    <a class="govuk-link" href="#">Return to list of schools and colleges</a>
+    or <a class="govuk-link" href="#">go to the next school or college</a>
+
+</p>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Manage users",
+href: "users"
+},
+{
+text: "Change user details"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Change user details
+        </h1>
+        <form class="edit_user" id="edit_user_6223" action="/schools/100070/users/6223" accept-charset="UTF-8"
+            method="post"><input type="hidden" name="_method" value="patch"><input type="hidden"
+                name="authenticity_token"
+                value="ryZrNUF4vlIUhw+5UVzoalIKNZ8YKt/hQ/cQ1GsKUMFRPpiSvrvwYvYHpklgrqSjq0gU2u0A+cvcwQen2iNiwA==">
+
+
+            <div class="govuk-form-group"><label for="user-full-name-field"
+                    class="govuk-label govuk-label--m">Name</label><input id="user-full-name-field" class="govuk-input"
+                    type="text" value="Satnam Singh School User" name="user[full_name]"></div>
+
+            <div class="govuk-form-group"><label for="user-email-address-field" class="govuk-label govuk-label--m">Email
+                    address</label><input id="user-email-address-field" class="govuk-input" type="email"
+                    value="satnam.singh+school@digital.education.gov.uk" name="user[email_address]"></div>
+
+            <div class="govuk-form-group"><label for="user-telephone-field" class="govuk-label govuk-label--m">Telephone
+                    number</label><input id="user-telephone-field" class="govuk-input govuk-input--width-10" type="text"
+                    name="user[telephone]"></div>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="user-orders-devices-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Do you want to give them access to
+                        the TechSource website for ordering?</legend><input value="" type="hidden"
+                        name="user[orders_devices]" id="user_orders_devices"><span class="govuk-hint"
+                        id="user-orders-devices-hint">No more than 3 users will be allowed to place orders.</span>
+                    <div class="govuk-radios govuk-!-margin-top-3" data-module="govuk-radios">
+                        <div class="govuk-radios__item"><input id="user-orders-devices-1-field"
+                                class="govuk-radios__input" type="radio" value="1" checked="checked"
+                                name="user[orders_devices]"><label for="user-orders-devices-1-field"
+                                class="govuk-label govuk-label--s govuk-radios__label">Yes, give them access to the
+                                TechSource website for ordering</label></div>
+                        <div class="govuk-radios__item"><input id="user-orders-devices-0-field"
+                                class="govuk-radios__input" type="radio" value="0" name="user[orders_devices]"><label
+                                for="user-orders-devices-0-field"
+                                class="govuk-label govuk-label--s govuk-radios__label">No</label></div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <a class="govuk-button" href="users">Save</a>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

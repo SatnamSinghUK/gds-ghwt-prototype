@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Check your organisation’s details"
+}
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            <span class="govuk-caption-xl">Mallowtown High School</span>
+            Set your Chromebook preferences
+        </h1>
+
+        <p class="govuk-body">When you order you can choose from these devices:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Microsoft Windows laptop</li>
+            <li>Google Chromebook</li>
+        </ul>
+
+
+        <p class="govuk-body">If you’re going to order Google Chromebooks, we need information to configure them before
+            you place your order.</p>
+
+        <form class="new_chromebook_information_form" id="new_chromebook_information_form"
+            action="/schools/100070/chromebooks" accept-charset="UTF-8" method="post"><input type="hidden"
+                name="_method" value="patch"><input type="hidden" name="authenticity_token"
+                value="6y/AI8LlNYoZmkCly0pmVrjedM00UnQB/4JFVq/Bo9Aze5sVKUPj4dwjqmKfnz+v/YyJP/sEsX5ceIWzh2WR4Q==">
+
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Will the
+                        school need Chromebooks?</legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item"><input
+                                id="chromebook-information-form-will-need-chromebooks-yes-field"
+                                class="govuk-radios__input" type="radio" value="yes"
+                                name="chromebook_information_form[will_need_chromebooks]"
+                                aria-controls="chromebook-information-form-will-need-chromebooks-yes-conditional"
+                                aria-expanded="false"><label
+                                for="chromebook-information-form-will-need-chromebooks-yes-field"
+                                class="govuk-label govuk-radios__label">We need Chromebooks</label></div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                            id="chromebook-information-form-will-need-chromebooks-yes-conditional">
+                            <div class="govuk-form-group"><label
+                                    for="chromebook-information-form-school-or-rb-domain-field"
+                                    class="govuk-label govuk-label--s">School or local authority email domain registered
+                                    for <span class="app-no-wrap">G Suite for Education</span></label><span
+                                    class="govuk-hint" id="chromebook-information-form-school-or-rb-domain-hint">For
+                                    example, ‘school.co.uk’</span><input
+                                    id="chromebook-information-form-school-or-rb-domain-field" class="govuk-input"
+                                    aria-describedby="chromebook-information-form-school-or-rb-domain-hint" type="text"
+                                    value="" name="chromebook_information_form[school_or_rb_domain]"></div>
+                            <div class="govuk-form-group"><label
+                                    for="chromebook-information-form-recovery-email-address-field"
+                                    class="govuk-label govuk-label--s">Recovery email address</label><span
+                                    class="govuk-hint" id="chromebook-information-form-recovery-email-address-hint">This
+                                    email will be on a different domain to the school domain, for example a Gmail or
+                                    Yahoo email account.</span><input
+                                    id="chromebook-information-form-recovery-email-address-field" class="govuk-input"
+                                    aria-describedby="chromebook-information-form-recovery-email-address-hint"
+                                    type="text" value="" name="chromebook_information_form[recovery_email_address]">
+                            </div>
+                            <p class="govuk-body govuk-!-margin-top-4">
+                                If you need help finding these details, speak to the people you usually contact for IT
+                                support.
+                            </p>
+                        </div>
+                        <div class="govuk-radios__item"><input
+                                id="chromebook-information-form-will-need-chromebooks-no-field"
+                                class="govuk-radios__input" type="radio" value="no" checked="checked"
+                                name="chromebook_information_form[will_need_chromebooks]"><label
+                                for="chromebook-information-form-will-need-chromebooks-no-field"
+                                class="govuk-label govuk-radios__label">We do not need Chromebooks</label></div>
+                    </div>
+                </fieldset>
+            </div>
+            <a href="details" class="govuk-button">Save</a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

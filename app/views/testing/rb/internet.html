@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Manage 4G routers"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Manage 4G routers</h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l govuk-!-font-size-27">
+      4G wireless routers
+    </h2>
+    <p class="govuk-body">
+      You can request a router for disadvantaged pupils and
+      students who do not have access to the internet at home.
+    </p>
+    <ul class="govuk-list govuk-list--spaced">
+      <li>
+        <a class="govuk-link" href="managing-4g-router">How to reset your router</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="huawei-router-password">See your Huawei router password</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+{% endblock %}

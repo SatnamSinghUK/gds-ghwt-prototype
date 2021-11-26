@@ -1,0 +1,184 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Laptops and tablets",
+href: "laptops-and-devices"
+},
+{
+text: "Who owns the devices"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Who owns the devices</h1>
+
+        <p class="govuk-body-l">Guidance on who owns devices, asset management and loan agreements.</p>
+
+        <h2 class="govuk-heading-s">Contents</h2>
+
+        <div class="app-table-of-contents">
+            <ul>
+                <li>
+                    <a href="#who-owns-the-devices">Who owns the devices</a>
+                </li>
+                <li>
+                    <a href="#owners-responsibilities">Owners’ responsibilities</a>
+                </li>
+                <li>
+                    <a href="#options-for-lending-or-giving-devices-to-children-young-people-and-other-organisations">Options
+                        for lending or giving devices to children, young people and other organisations</a>
+                </li>
+                <li>
+                    <a href="#what-to-do-if-circumstances-change-for-children-and-young-people">What to do if
+                        circumstances change for children and young people</a>
+                </li>
+                <li>
+                    <a href="#labelling-or-tagging-devices">Labelling or tagging devices</a>
+                </li>
+                <li>
+                    <a href="#lost-stolen-or-sold-devices">Lost, stolen or sold devices</a>
+                </li>
+            </ul>
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 id="who-owns-the-devices" class="govuk-heading-l">Who owns the devices</h2>
+        <p class="govuk-body-m">Guidance for LAs, trusts, schools, colleges and FE institutions about who owns devices,
+            asset management and loan agreements.</p>
+        <h2 id="owners-responsibilities" class="govuk-heading-l">Owners’ responsibilities</h2>
+        <p class="govuk-body-m">Ownership of laptops, tablets and 4G wireless routers is transferred from DfE to the
+            local authorities (LAs), academy trusts, schools, colleges and further education (FE) institutions that have
+            received them.</p>
+        <p class="govuk-body-m">Device owners are able to choose how and when to temporarily lend, or permanently give,
+            devices to children and young people in need, or to other organisations. Before parting with your devices,
+            you’ll want to consider carefully your school’s or service’s future need for face-to-face learning, remote
+            learning support and online social care.</p>
+        <p class="govuk-body-m">DfE expects organisations to decide how best to make devices available to disadvantaged
+            children and young people so they can access remote education, face-to-face learning and online social care
+            when needed.</p>
+        <h2 id="options-for-lending-or-giving-devices-to-children-young-people-and-other-organisations"
+            class="govuk-heading-l">Options for lending or giving devices to children, young people and other
+            organisations</h2>
+        <p class="govuk-body-m">You must consider safeguarding when making your decision about lending.</p>
+        <p class="govuk-body-m"><a href="https://www.saferinternet.org.uk/" class="govuk-link">Guidance on safe internet
+                use</a> should be provided at the same time as devices are lent or given.</p>
+        <h4 id="option-1-lending-devices-to-children-and-young-people" class="govuk-heading-s">Option 1: Lending devices
+            to children and young people</h4>
+        <p class="govuk-body-m">You should consider retaining ownership and management of the devices when you lend them
+            to children, families and young people.</p>
+        <p class="govuk-body-m">The benefits of lending are:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="/devices/safeguarding-for-device-users" class="govuk-link">safeguarding device settings</a>,
+                such as content filtering and mobile device management (MDM), can be maintained</li>
+            <li>children and young people can access IT support from the device owner if needed</li>
+            <li>devices can be redistributed to other children and young people as needs change</li>
+
+        </ul>
+        <h4 id="option-2-permanently-giving-devices-to-other-organisations" class="govuk-heading-s">Option 2:
+            Permanently giving devices to other organisations</h4>
+        <p class="govuk-body-m">You can choose to give devices to other organisations. The new owner will then decide
+            how to distribute them to children and young people in need.</p>
+        <p class="govuk-body-m">LAs that have been allocated devices for state-funded pupils in independent special
+            schools and alternative provision can give devices to those settings. You should make sure that DfE devices
+            will only be distributed to state-funded pupils as a condition of your agreement to transfer ownership to
+            them.</p>
+        <h4 id="option-3-permanently-giving-devices-to-children-and-young-people" class="govuk-heading-s">Option 3:
+            Permanently giving devices to children and young people</h4>
+        <p class="govuk-body-m">You can choose to give devices to children, young people and families, where you’ve
+            deemed it appropriate. This may include giving devices to care leavers. Giving devices permanently to
+            children and young people should only be considered after assessing the benefits of the 2 options listed
+            above.</p>
+        <p class="govuk-body-m">Before making this decision, you should consider:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>future needs of your setting or service for face-to-face and remote education (such as for disadvantaged
+                children and young people joining the setting or service)</li>
+            <li><a href="/devices/safeguarding-for-device-users" class="govuk-link">safeguarding</a> – relevant parties
+                (such as social workers, schools or carers) should be involved in making this decision</li>
+            <li>online safety, when device settings expire – for example, DfE does not recommend gifting DfE Restricted
+                Windows devices before <a href="/devices/guide-to-resetting-windows-laptops-and-tablets"
+                    class="govuk-link">replacing their temporary safeguarding and management settings</a></li>
+            <li>how IT support will be provided – you should <a href="/devices/replace-a-faulty-device"
+                    class="govuk-link">let the recipient know how to get help if their device develops a fault</a> (DfE
+                does not provide ongoing IT support)</li>
+
+        </ul>
+        <h2 id="what-to-do-if-circumstances-change-for-children-and-young-people" class="govuk-heading-l">What to do if
+            circumstances change for children and young people</h2>
+        <h3 id="if-a-child-or-young-person-no-longer-meets-the-eligibility-criteria-to-have-a-device"
+            class="govuk-heading-m">If a child or young person no longer meets the eligibility criteria to have a device
+        </h3>
+        <p class="govuk-body-m">A child or young person may no longer meet the criteria under which a device was
+            provided, for example, they may no longer receive support from a social worker.</p>
+        <p class="govuk-body-m">If this happens, you should assess the needs of the child or young person, including
+            safeguarding. You can then decide whether to let them continue using the device, or ask them to return it.
+        </p>
+        <p class="govuk-body-m">If a device has been permanently given to a child or young person, it’s their property.
+        </p>
+        <h3 id="if-a-child-or-young-person-moves-to-another-educational-setting" class="govuk-heading-m">If a child or
+            young person moves to another educational setting</h3>
+        <p class="govuk-body-m">Children and young people may be given devices by one educational setting, then move to
+            another. Device ownership transferral will need to be decided between them.</p>
+        <p class="govuk-body-m">The original device owner should uninstall any software they’ve added, unless licences
+            are being transferred too. They should let the new educational setting know what changes have been made, so
+            that it can be set up and secured appropriately again.</p>
+        <h3 id="if-a-care-leaver-or-child-with-a-social-worker-moves-to-another-area" class="govuk-heading-m">If a care
+            leaver or child with a social worker moves to another area</h3>
+        <p class="govuk-body-m">If an LA has given a child or young person a device and that person moves area, the LA
+            can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>discuss transferring ownership of the device with the new LA, a relevant educational setting, or with
+                the child or care leaver (if it’s safe and appropriate to do so)</li>
+            <li>ask the child or young person to return the device so it can be redistributed within the LA</li>
+
+        </ul>
+        <h3 id="deciding-how-to-distribute-devices" class="govuk-heading-m">Deciding how to distribute devices</h3>
+        <p class="govuk-body-m">You can decide how best to meet the needs of vulnerable children and young people.</p>
+        <p class="govuk-body-m">If you have any concerns about lending or giving a device to a child or young person for
+            safeguarding reasons, you must use your judgement. For example, you may decide that the device should:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>not be given to that child or young person because other forms of contact are more appropriate</li>
+            <li>only be used in supervised contexts (with a social worker, or support of an educational setting)</li>
+            <li>be managed by an educational setting</li>
+            <li>be used for other children or young people who would benefit from it, outside of eligible groups</li>
+
+        </ul>
+        <h2 id="labelling-or-tagging-devices" class="govuk-heading-l">Labelling or tagging devices</h2>
+        <p class="govuk-body-m">Laptops, tablets and 4G wireless routers are not tagged or labelled when they’re
+            delivered. Schools, colleges, further education institutions, LAs and trusts are responsible for
+            implementing their own security and tracking methods.</p>
+        <p class="govuk-body-m">You may invalidate the warranty on your device if you use any permanent method of
+            labelling or tagging.</p>
+        <h2 id="lost-stolen-or-sold-devices" class="govuk-heading-l">Lost, stolen or sold devices</h2>
+        <p class="govuk-body-m">You should make clear to recipients of devices that it’s unlawful for any lent device to
+            be sold by a student or their family. If a lent device is lost, stolen or sold, or where recall is not
+            possible, you should follow any existing protocol you have for lost, stolen or missing devices.</p>
+        <p class="govuk-body-m">If you have a safeguarding concern relating to a device you suspect has been lost,
+            stolen or sold, you should <a href="/get-support" class="govuk-link">contact us</a>.</p>
+
+
+    </div>
+</div>
+
+
+{% endblock %}

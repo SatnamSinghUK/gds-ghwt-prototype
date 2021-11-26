@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account"
+}
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            <span class="govuk-caption-xl">Essex County Council</span>
+            Your account
+        </h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop govuk-grid-column-full">
+        <style>
+            .app-card {
+                background-color: #f3f2f1;
+                display: block;
+                text-decoration: none;
+                font-family: GDS Transport, arial, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-weight: 400;
+                font-size: 16px;
+                font-size: 1rem;
+                line-height: 1.25;
+                font-size: 1.1875rem;
+                line-height: 1.3157894737;
+                padding: 20px;
+            }
+        </style>
+        <div id="allocation" class="app-card govuk-!-margin-bottom-4">
+            <h2 id="total_allocation_sentence" class="govuk-heading-l">
+                Essex County Council has a total allocation of 234 devices for academic year 2021/22
+            </h2>
+
+            <h2>You can order 4G routers</h2>
+
+            <h2 id="ordered_sentence">
+                You’ve ordered 108 devices and 38 routers in academic year 2021/22
+            </h2>
+
+            <div id="current_tranche">
+                <div class="govuk-warning-text govuk-!-margin-bottom-0"><span class="govuk-warning-text__icon"
+                        aria-hidden="true">!</span><strong class="govuk-warning-text__text"><span
+                            class="govuk-warning-text__assistive">Warning</span>These allocations are for the current
+                        winter 2021 Get help with tech programme. Devices ordered before 30 September 2021 are not
+                        included here.</strong></div>
+            </div>
+
+            <div id="order-devices">
+                <a class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-1" href="order-devices">Order
+                    devices</a>
+            </div>
+
+        </div>
+
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
+            data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Reset your
+                    DfE-restricted Windows laptops and tablets
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="govuk-notification-banner__heading">DfE-restricted Windows laptops and tablets need to be
+                    reset as soon as possible
+                </p>
+                <p class="">If you ordered devices before <strong>30 June 2021</strong> you can:
+
+                </p>
+
+                <p><a class="govuk-notification-banner__link govuk-notification-banner__heading"
+                        href=" https://get-help-with-tech.education.gov.uk/assets">View your details
+                        and BIOS/admin passwords</a></p>
+
+                <p><a class="govuk-notification-banner__link govuk-notification-banner__heading"
+                        href="https://get-help-with-tech.education.gov.uk/devices/guide-to-resetting-windows-laptops-and-tablets">Find
+                        out more about resetting Windows devices</a>
+                </p>
+            </div>
+        </div>
+        <h2 class="govuk-heading-m govuk-!-margin-top-6">Further guidance</h2>
+        <p class="govuk-body">
+            Learn more about
+            <a class="govuk-link" href="/devices/guide-to-resetting-windows-laptops-and-tablets">resetting Windows
+                laptops and
+                tablets</a>.
+        </p>
+        <p class="govuk-body">
+            Learn more about
+            <a class="govuk-link" href="/devices/managing-your-4g-wireless-routers">managing your 4G wireless
+                routers</a>.
+        </p>
+
+
+        <h2 class="govuk-heading-l govuk-!-font-size-27">
+            <a class="govuk-link" href="order-devices">Order devices and routers</a>
+        </h2>
+
+        <p class="govuk-body">Use this section to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>order devices</li>
+            <li>add school or college contacts</li>
+            <li>tell us who’ll place orders for schools and colleges</li>
+            <li>give school and college staff access to this service and TechSource</li>
+            <li>order devices for children arriving under Operation Warm Welcome.</li>
+        </ul>
+
+        <h2 class="govuk-heading-l govuk-!-font-size-27">
+            <a class="govuk-link" href="internet">Manage 4G routers</a>
+        </h2>
+
+        <p class="govuk-body">Use this section to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>manage 4G routers</li>
+            <li>see your Huawei router password.</li>
+        </ul>
+
+        <h2 class="govuk-heading-l govuk-!-font-size-27">
+            <a class="govuk-link" href="users">Manage your schools and users</a>
+        </h2>
+
+        <p class="govuk-body">Use this section to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>give other people access to this service</li>
+            <li>set which accounts can use TechSource to order</li>
+            <li>manage the schools that you can order for.</li>
+        </ul>
+
+        <h2 class="govuk-heading-m  govuk-!-margin-top-6">Order history</h2>
+        <ul class="govuk-list govuk-list--spaced">
+            <li><a class="govuk-link" href="/techsource-start">See your order history on TechSource</a></li>
+
+            <li><a class="govuk-link" href="/responsible-body/devices/schools">View your schools and colleges</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Order devices and routers"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+<style>
+.app-card {
+    background-color: #f3f2f1;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    font-family: GDS Transport,arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+</style>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Order devices and routers</h1>
+
+    <h2 class="govuk-heading-l govuk-!-font-size-27">
+      <a class="govuk-link" href="your-schools">Your schools and colleges</a>
+    </h2>
+
+    <p class="govuk-body">Use this section to:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>see your list of schools and colleges and their device allocations</li>
+      <li>tell us if the school or colleges will place their own orders</li>
+      <li>give contacts and technical information for each school or college.</li>
+    </ul>
+
+      <h2 class="govuk-heading-l govuk-!-font-size-27">
+        <a class="govuk-link" href="order-devices">Order devices</a>
+      </h2>
+
+      <p class="govuk-body">
+        Use this section to access the TechSource
+        website to order laptops and tablets.
+      </p>
+  </div>
+</div>
+
+
+{% endblock %}

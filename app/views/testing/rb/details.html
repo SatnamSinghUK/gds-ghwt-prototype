@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Check your organisation’s details"
+}
+]
+}) }}
+{% endblock %}
+{% block content %}
+<div class="app-banner app-banner--success" aria-labelledby="success-message" data-module="govuk-error-summary" tabindex="-1" role="alert">
+      <div class="app-banner__message">
+        <h2 class="govuk-heading-m" id="success-message">
+          We’ve saved your choices
+        </h2>
+      </div>
+    </div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            <span class="govuk-caption-xl">Marblewald High School</span>
+            Check your organisation’s details
+        </h1>
+    </div>
+</div>
+<div class="school-details-summary-list">
+    <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Device allocation
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <p class="govuk-body">77 devices</p>
+            </dd>
+
+            <dd class="govuk-summary-list__actions">
+                {# <a class="govuk-link govuk-!-display-none-print" href="#">Query allocation</a> #}
+            </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Setting
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <p class="govuk-body">Other</p>
+            </dd>
+
+            <span class="govuk-summary-list__actions"></span>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Will you need to order Chromebooks?
+            </dt>
+            <dd class="govuk-summary-list__value">
+                <p class="govuk-body">We do not need Chromebooks</p>
+            </dd>
+
+            <dd class="govuk-summary-list__actions">
+                <a class="govuk-link govuk-!-display-none-print" href="chromebooks-edit">
+                    Change<span class="govuk-visually-hidden"> whether Chromebooks are needed</span>
+                </a>
+            </dd>
+        </div>
+    </dl>
+
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">
+            About allocations
+        </h2>
+
+        <p class="govuk-body">
+            Allocations are based on an estimate of the number of devices your school, college or <span
+                class="app-no-wrap">further education institution</span> already has and the number of:
+        </p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+            <li>pupils in years 3 to 11</li>
+            <li>pupils who get free school meals</li>
+            <li>students in 16 to 19 further education</li>
+            <li>students who get free meals in further education.</li>
+        </ul>
+
+        <p class="govuk-body">
+            <a class="govuk-link" href="/devices/device-allocations">Find out more about how devices were allocated</a>
+            {# Add link in#}
+        </p>
+    </div>
+</div>
+
+{% endblock %}

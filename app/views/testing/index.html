@@ -13,7 +13,7 @@ Getting help with technology
             Testing
         </h1>
         <p>
-            New Testing area for GHWT, here you will find each user flow for testing.
+            Usability Testing area for GHWT, here you will find each user flow for testing.
         </p>
 
 
@@ -21,9 +21,6 @@ Getting help with technology
         <br><br>
         {% from "govuk/components/button/macro.njk" import govukButton %}
 
-        {# {{ govukButton({
-        text: "Save and continue"
-        }) }} #}
         {% from "govuk/components/table/macro.njk" import govukTable %}
 
 
@@ -41,7 +38,7 @@ Getting help with technology
                     <th scope="row" class="govuk-table__header" style="vertical-align: middle">RB
                     </th>
                     <td class="govuk-table__cell">
-                        <a class="govuk-button" href="testing/homepage" style="margin: 0">
+                        <a class="govuk-button" href="testing/rb/homepage" style="margin: 0">
                             View
                         </a>
                     </td>
@@ -55,7 +52,7 @@ Getting help with technology
                         </a>
                     </td>
                 </tr>
-                <tr class="govuk-table__row">
+                {# <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header" style="vertical-align: middle">Supplier
                         <strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--orange">
                         WIP
@@ -102,86 +99,10 @@ Getting help with technology
                             View
                         </a>
                     </td>
-                </tr>
+                </tr> #}
             </tbody>
         </table>
-        {#
-        <br><br>
-        <h2 class="govuk-heading-m">Prototype change log</h2>
-        {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
-        {{ govukSummaryList({
-        rows: [
-        {
-        key: {
-        text: "23/9/2021"
-        },
-        value: {
-        text: "School order screen"
-        },
-        actions: {
-        items: [
-        {
-        href: "school-order",
-        text: "View",
-        visuallyHiddenText: "view"
-        }
-        ]
-        }
-        },
-        {
-        key: {
-        text: "22/9/2021"
-        },
-        value: {
-        text: "Chromebook journey improvements"
-        },
-        actions: {
-        items: [
-        {
-        href: "school-chromebook",
-        text: "View",
-        visuallyHiddenText: "view"
-        }
-        ]
-        }
-        },
-        {
-        key: {
-        text: "15/9/2021"
-        },
-        value: {
-        text: "Heroku setup for prototype initiated"
-        },
-        actions: {
-        items: [
-        {
-        href: "",
-        text: "",
-        visuallyHiddenText: "view"
-        }
-        ]
-        }
-        },
-        {
-        key: {
-        text: "14/9/2021"
-        },
-        value: {
-        html: "GDS Prototype repo cloned"
-        },
-        actions: {
-        items: [
-        {
-        href: "",
-        text: "",
-        visuallyHiddenText: "view"
-        }
-        ]
-        }
-        }
-        ]
-        }) }} #}
 
     </div>
 </div>

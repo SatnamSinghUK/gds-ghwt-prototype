@@ -1,0 +1,259 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Your schools and colleges"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+<style>
+    .app-card {
+        background-color: #f3f2f1;
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-family: GDS Transport, arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+        margin-bottom: 15px;
+    }
+</style>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
+            Your schools and colleges
+        </h1>
+
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Is this list wrong?</span>
+            </summary>
+            <div class="govuk-details__text">
+                <p>This is a list of all local authority maintained and special schools.</p>
+                <p>Email <a class="govuk-link"
+                        href="mailto:COVID.TECHNOLOGY@education.gov.uk?subject=Problem%20with%20list%20of%20schools">COVID.TECHNOLOGY@education.gov.uk</a>
+                    and tell us what to&nbsp;change.</p>
+            </div>
+        </details>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div id="allocation" class="app-card govuk-!-margin-bottom-4">
+            <h2 id="total_allocation_sentence" class="govuk-heading-l">
+                Essex County Council has a total allocation of 234 devices for academic year 2021/22
+            </h2>
+
+            <h2>You can order 4G routers</h2>
+
+            <h2 id="ordered_sentence">
+                You’ve ordered 108 devices and 38 routers in academic year 2021/22
+            </h2>
+
+            <div id="current_tranche">
+                <div class="govuk-warning-text govuk-!-margin-bottom-0"><span class="govuk-warning-text__icon"
+                        aria-hidden="true">!</span><strong class="govuk-warning-text__text"><span
+                            class="govuk-warning-text__assistive">Warning</span>These allocations are for the current
+                        winter 2021 Get help with tech programme. Devices ordered before 30 September 2021 are not
+                        included here.</strong></div>
+            </div>
+
+            <div id="order-devices">
+                <a class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-1" href="order-devices">Order
+                    devices</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margine-top-4">
+        <h3 class="govuk-heading-m">Schools and colleges that can order</h3>
+    </div>
+</div>
+<table id="ordering-schools" class="govuk-table">
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header app-schools-table__column-40">School or college</th>
+            <th class="govuk-table__header app-schools-table__column-40">Who will order?</th>
+            <th class="govuk-table__header app-schools-table__column-20"><span
+                    class="govuk-visually-hidden">Status</span></th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school">Bluemeadow High (100219)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school">Bluemeadow Secondary College
+                    (100343)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school">Brighthurst Secondary College
+                    (100216)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school">Iceborough High (100356)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school">Ironbarrow High (100358)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school">Ironston High School (100217)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school">Lakeacre High School (100348)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school">Lakeacre Secondary College
+                    (100215)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school">Marblewald Secondary College
+                    (100359)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="school">Ostbarrow Secondary College
+                    (100214)</a>
+                <br>
+                Other
+            </td>
+            <td class="govuk-table__cell">
+                Local authority
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--nowrap">
+                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+{% endblock %}

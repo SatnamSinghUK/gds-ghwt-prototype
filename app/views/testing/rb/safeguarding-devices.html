@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Laptops and tablets",
+href: "laptops-and-devices"
+},
+{
+text: "Safeguarding devices"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Safeguarding devices</h1>
+
+        <p class="govuk-body-l">Information on content filtering and mobile device management to ensure devices are safe
+            to use by young people and families.</p>
+
+        <h2 class="govuk-heading-s">Contents</h2>
+
+        <div class="app-table-of-contents">
+            <ul>
+                <li>
+                    <a href="#devices-ordered-from-october-2021-onwards">Devices ordered from October 2021 onwards</a>
+                </li>
+                <li>
+                    <a href="#devices-ordered-before-october-2021">Devices ordered before October 2021</a>
+                </li>
+                <li>
+                    <a href="#safeguarding-and-security-settings-for-pre-owned-or-donated-devices">Safeguarding and
+                        security settings for pre-owned or donated devices</a>
+                </li>
+                <li>
+                    <a href="#advice-for-parents-and-carers">Advice for parents and carers</a>
+                </li>
+            </ul>
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <p class="govuk-body-m">Local authorities, academy trusts, schools, colleges and further education institutions
+            all have a responsibility to keep children and young people safe online.</p>
+        <p class="govuk-body-m">This applies where laptops and tablets are provided through the Department for Education
+            (DfE) Get help with technology programme, as well as any new or refurbished devices received through
+            donations.</p>
+        <h2 id="devices-ordered-from-october-2021-onwards" class="govuk-heading-l">Devices ordered from October 2021
+            onwards</h2>
+        <p class="govuk-body-m">Laptops and tablets ordered from October 2021 onwards are delivered with factory
+            settings and do not have any DfE-managed software installed. Owners of devices are responsible for ensuring
+            appropriate content filters and device management systems are in place.</p>
+        <h2 id="devices-ordered-before-october-2021" class="govuk-heading-l">Devices ordered before October 2021</h2>
+        <p class="govuk-body-m">For devices delivered before October 2021, organisations could choose between standard
+            devices, or devices with pre-installed safeguarding software. These came with:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Cisco Umbrella – content filtering software that blocks a range of illegal and inappropriate content and
+                limits searching to the ‘Safe Search’ provided by popular search engines</li>
+            <li>Microsoft Intune – device management software that prevents users from installing unauthorised software
+                or making changes to files and settings</li>
+
+        </ul>
+        <p class="govuk-body-m">Licences for this software were due to expire on 30 September 2021, but to ensure they
+            remain safe for children and young people to use, we extended licences until 30 September 2022.</p>
+        <p class="govuk-body-m">You’re still required to take control of the devices as soon as possible by restoring
+            them to factory settings and applying your own remote management solution. Read our guidance on <a
+                href="/devices/guide-to-resetting-windows-laptops-and-tablets" class="govuk-link">how to apply your own
+                settings to devices</a> to see the actions required to ensure those who received them can continue to
+            use them safely.</p>
+        <h2 id="safeguarding-and-security-settings-for-pre-owned-or-donated-devices" class="govuk-heading-l">
+            Safeguarding and security settings for pre-owned or donated devices</h2>
+        <p class="govuk-body-m">New and refurbished laptops and tablets that have been purchased or donated can help
+            supplement the allocation of laptops and tablets from DfE.</p>
+        <p class="govuk-body-m">If you receive devices for your school or college through donations, you’re responsible
+            for ensuring they’re prepared so they’re appropriate for use.</p>
+        <p class="govuk-body-m">Information we’ve produced on content filtering, privacy policies and mobile device
+            management is also relevant to any new and pre-owned devices. We recommend you follow our guidance on <a
+                href="/devices/preparing-a-standard-windows-device" class="govuk-link">preparing a Windows device</a>,
+            <a href="/devices/preparing-chromebooks" class="govuk-link">Chromebook</a> or <a
+                href="/devices/preparing-ipads" class="govuk-link">iPad</a> before lending a device to a child or young
+            person.
+        </p>
+        <p class="govuk-body-m">The following information will help you make decisions on how to set up and manage these
+            devices.</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="https://www.ncsc.gov.uk/blog-post/erasing-data-from-donated-devices" class="govuk-link">Erasing
+                    data from donated devices</a> – guidance from the National Centre for Cyber Security (NCSC) covering
+                protecting personal data, how to erase data before donating, avoiding unsupported devices, and good
+                cyber practice.</li>
+            <li><a href="https://www.hse.gov.uk/pubns/books/hsg107.htm" class="govuk-link">Maintaining portable
+                    electrical equipment</a> – guidance from the Health and Safety Executive (HSE) covering legal
+                responsibilities around ensuring electrical equipment is maintained and <a
+                    href="https://www.hse.gov.uk/electricity/faq-portable-appliance-testing.htm"
+                    class="govuk-link">portable appliance testing (PAT)</a>.</li>
+
+        </ul>
+        <h2 id="advice-for-parents-and-carers" class="govuk-heading-l">Advice for parents and carers</h2>
+        <p class="govuk-body-m">If you’re worried that your child is accessing harmful content on any device, you can <a
+                href="https://www.gov.uk/guidance/safeguarding-and-remote-education-during-coronavirus-covid-19"
+                class="govuk-link">find support and advice at GOV.UK</a>.</p>
+        <p class="govuk-body-m">If your child is worried or needs support, they can call <a
+                href="https://www.childline.org.uk/" class="govuk-link">Childline</a> (0800 1111) or download their ‘For
+            Me’ app.</p>
+        <p class="govuk-body-m">If your child has a social worker, you should contact your local authority if you have
+            any concerns about your child’s safety or wellbeing.</p>
+
+
+    </div>
+</div>
+
+
+{% endblock %}
