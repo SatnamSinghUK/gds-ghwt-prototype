@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Order devices"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+
+<style>
+    .app-card {
+        background-color: #f3f2f1;
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        font-family: GDS Transport, arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+        margin-bottom: 15px;
+    }
+</style>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            You'll be able to order once your TechSource account is ready
+        </h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body">You'll be able to order 48 devices and 5 routers soon.</p>
+        <p class="govuk-body">Orders are placed on a website called TechSource, but your account is not ready yet. It
+            should be ready in the next 24 hours.</p>
+        <p class="govuk-body">We'll email you when you can order.</p>
+        <p class="govuk-body">Most devices will be delivered within 5 working days of an order being confirmed, subject
+            to stock availability.</p>
+        <p class="govuk-body">While you're waiting, <a href="#">check which devices and specifications are available</a>
+            to decide what you'll order.</p>
+
+    </div>
+</div>
+
+
+{% endblock %}
