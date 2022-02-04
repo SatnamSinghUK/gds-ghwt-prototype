@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+{% set test = false %}
+
+{% set bread = true %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            Winter service 2021/22 allocation and ordering
+        </h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">
+            Total ordered devices (by wave?) split into type
+        </h2>
+        <p class="govuk-body">Sample text here for placeholder illustration P45 design</p>
+        {% from "govuk/components/table/macro.njk" import govukTable %}
+
+        {{ govukTable({
+        captionClasses: "govuk-table__caption--m",
+        firstCellIsHeader: true,
+        head: [
+        {
+        text: "Wave"
+        },
+        {
+        text: "Ordered"
+        }
+        ],
+        rows: [
+        [
+        {
+        text: "Autumn (Sep 2021)"
+        },
+        {
+        text: "245,000"
+        }
+        ],
+        [
+        {
+        text: "Winter (Jan 2022)"
+        },
+        {
+        text: "348,845"
+        }
+        ]
+
+        ]
+        }) }}
+
+
+        <h2 class="govuk-heading-l">
+
+            Serial numbers
+
+        </h2>
+        <p class="govuk-body">Sample text here for placeholder illustration P45 design</p>
+        <h2 class="govuk-heading-l">
+
+            BIOS information (was viewed?)
+
+        </h2>
+        <p class="govuk-body">Sample text here for placeholder illustration P45 design</p>
+        <h2 class="govuk-heading-l">
+            Guidance for warranty
+
+        </h2>
+        <p class="govuk-body">Sample text here for placeholder illustration P45 design</p>
+        <h2 class="govuk-heading-l">
+            Proof of delivery
+
+        </h2>
+        <p class="govuk-body">Sample text here for placeholder illustration P45 design</p>
+        <h2 class="govuk-heading-l">
+            Proof of ownership
+
+        </h2>
+        <p class="govuk-body">Sample text here for placeholder illustration P45 design</p>
+        <h2 class="govuk-heading-l">
+            Device value for insurance
+        </h2>
+        <p class="govuk-body">Sample text here for placeholder illustration P45 design</p>
+
+
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+        text: "Print"
+        }) }}
+
+    </div>
+</div>
+
+
+{% endblock %}

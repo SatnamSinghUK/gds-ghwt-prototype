@@ -1,0 +1,378 @@
+{% extends "layout.html" %}
+{% set test = true %}
+
+{% set bread = true %}
+{% set home = 'Yo' %}
+
+{% block pageTitle %}
+Get help with technology
+{% endblock %}
+{% block breadCrumbs %}
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "/testing"
+},
+{
+text: "Your account",
+href: "your-account"
+},
+{
+text: "Do you want donated devices?"
+}
+
+]
+}) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-tabs__panel" id="schools-and-colleges" role="tabpanel" aria-labelledby="tab_schools-and-colleges">
+    <h2 class="govuk-heading-l">Schools and colleges</h2>
+    <h2 class="govuk-heading-l">Centrally managed schools and colleges</h2>
+    <p class="govuk-body">DIVERSE ACADEMIES TRUST</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>manages ordering for all of its schools and colleges</li>
+        <li>vcap: <strong class="govuk-tag govuk-tag--green">Yes
+            </strong></li>
+        <li>has 537 devices and 700 routers available to order right now</li>
+        <li>has ordered 0 devices and 0 routers so far</li>
+    </ul>
+
+    <p class="govuk-body">For centrally managed schools and colleges, device allocations are combined. We only know how
+        many devices DIVERSE ACADEMIES TRUST has ordered, not how many devices went to which school or college.</p>
+
+
+    <table id="responsible-body-schools" class="govuk-table">
+        <caption class="govuk-table__caption govuk-visually-hidden">Schools and colleges</caption>
+
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Name and URN</th>
+                <th scope="col" class="govuk-table__header">Vcap</th>
+                <th scope="col" class="govuk-table__header">Status</th>
+                <th scope="col" class="govuk-table__header">Devices</th>
+                <th scope="col" class="govuk-table__header">Routers</th>
+                <th scope="col" class="govuk-table__header">Who is ordering</th>
+                <th scope="col" class="govuk-table__header">Actions</th>
+            </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a class="govuk-link" href="/support/schools/110261">Ash Hill Primary
+                        School (110261)</a><br>Primary school</td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Yes</strong>
+                </td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">School contacted</strong>
+                </td>
+                <td class="govuk-table__cell">
+                    40 allocated<br>
+                    0 caps<br>
+                    0 ordered
+                </td>
+                <td class="govuk-table__cell">
+                    0 allocated<br>
+                    0 caps<br>
+                    0 ordered
+                </td>
+                <td class="govuk-table__cell">
+                    School or college
+                </td>
+                <td class="govuk-table__cell">
+                </td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a class="govuk-link" href="/support/schools/110449">Winslow Church of
+                        England School (110449)</a><br>Primary school</td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">None</strong>
+                </td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Needs a contact</strong>
+                </td>
+                <td class="govuk-table__cell">
+                    15 allocated<br>
+                    0 caps<br>
+                    0 ordered
+                </td>
+                <td class="govuk-table__cell">
+                    0 allocated<br>
+                    0 caps<br>
+                    0 ordered
+                </td>
+                <td class="govuk-table__cell">
+                    School or college
+                </td>
+                <td class="govuk-table__cell">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div class="grid-row">
+
+
+    <legend>
+        <h1 class="govuk-heading-xl">Enter the amount to pay</h1>
+    </legend>
+
+
+
+    <form method="POST" novalidate="" action="/pay/enter-payment-amount?traceId=00328717" class="form toggle-controlled"
+        autocomplete="off">
+
+        <input type="hidden" name="csrfToken"
+            value="84ec4d414da5d01c5fcae005b8f63edd6adef70c-1639551646205-85cf4ae4a07bd7746dbf7b37">
+
+
+
+
+
+
+
+        <div id="amount-to-pay-input" class="govuk-form-group ">
+            <span class="govuk-visually-hidden">Enter an amount in pounds</span>
+
+
+            <div class="govuk-form-group">
+
+
+
+
+
+
+
+
+                <div class="govuk-input__wrapper">
+
+
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+
+                    <input class="govuk-input govuk-input--width-5" id="amountToPay" name="amountToPay" type="text"
+                        pattern="[0-9]*" inputmode="decimal">
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <br>
+
+
+
+
+
+
+
+
+        <button class="govuk-button" data-module="govuk-button" id="next">
+            Continue
+
+        </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+
+
+</div>
+{% endblock %}
