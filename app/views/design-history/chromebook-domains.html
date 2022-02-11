@@ -12,7 +12,7 @@ text: "Get help with tech design history",
 href: "/design-history"
 },
 {
-text: "Asset tag view"
+text: "Multiple chromebook domains"
 }
 
 ]
@@ -9461,151 +9461,49 @@ text: "Asset tag view"
     <div class="app-article__body">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <!-- <div class="app-prose">
-                    <p>A follow-on from the <a href="/register-for-an-npq/registered-before/">original design</a>.</p>
-                    <p>In this design the following has changed:</p>
-                    <ul>
-                        <li>we do not immediately assume the email owner is the person who registered before</li>
-                        <li>we ask if they are the name on record, then confirm with date of birth</li>
-                        <li>after confirmation of email and date of birth, we playback their information</li>
-                        <li>following confirmation of identity, the user continues with most of the questions in the
-                            current flow</li>
-                        <li>they do not see the pages asking about TRN, name, date of birth or National Insurance number
-                        </li>
-                    </ul>
-                    <h2 id="video-walkthrough" tabindex="-1"><a class="header-anchor" href="#video-walkthrough">Video
-                            walkthrough</a></h2>
-                    <div class="app-embed">
-                        <iframe src="https://www.youtube-nocookie.com/embed/me4ydWPr-X0?modestbranding=1&amp;autoplay=1"
-                            srcdoc="<style>* {margin: 0;overflow: hidden;padding: 0;}html, body {height: 100%;}img, span {bottom: 0;margin: auto;position: absolute;top: 0;width: 100%;}a {display: flex;justify-content: center;}span {background-color: rgba(0, 0, 0, 0.5);text-align: center;line-height: 1.66;height: 1.5em;width: 1.5em;padding: 0.5rem 0.25rem 0.5rem 0.75rem;font-size: 3em;border-radius: 100%;color: white;text-shadow: 0 0 1px black;}a:hover span {background-color: rgba(0, 0, 0, 0.75);}</style><a href=https://www.youtube-nocookie.com/embed/me4ydWPr-X0?modestbranding=1&amp;autoplay=1><img src=https://img.youtube.com/vi/me4ydWPr-X0/maxresdefault.jpg><span>▶</span></a>"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen="" title="">
-                        </iframe>
-                    </div>
+                <div class="app-prose">
+                    <h2>Design task</h2>
+                    <p>A <a href="/design-history/chromebooks-interaction">previous design task</a> around managing
+                        Chromebook orders presented a few design questions.</p>
+                    <p>One of the design issues was around how to accessibly present Chromebook based questions in a
+                        single view.</p>
+                    <p>Some of the details that were required as part of the process were to capture the Email domain
+                        (of the authority), this was a input field response and the main issue we had was how to handle
+                        multiple domains.</p>
+                    <p>The added complexity comes with the data collection, that the Chromebook partner has a handling
+                        process which meant we couldn't design a suitable design in the interface, that could easily
+                        work with their process.</p>
+
                     <hr>
-                    <h2 id="asking-who-they-are" tabindex="-1"><a class="header-anchor"
-                            href="#asking-who-they-are">Asking who they are</a></h2>
-                    <p>When we ask who they are, we must use the name they gave during registration, not the name on the
-                        DQT record. It’s a playback of what they told us, not what information we already had.</p>
-                    <h2 id="confirming-date-of-birth" tabindex="-1"><a class="header-anchor"
-                            href="#confirming-date-of-birth">Confirming date of birth</a></h2>
-                    <p>When implementing this check we need to be lenient on formatting – if they previously entered
-                        <code>01-01-1990</code> but are now giving something like <code>1-1-90</code>, those should
-                        still match.
-                    </p>
-                    <p>We should check a date is valid before checking if it matches.</p>
-                    <p>If the dates do not match our error message should be:</p>
-                    <blockquote>
-                        <p><strong>The date of birth you’ve given does not match our records</strong><br>
-                            Contact our support team if you need help:<br>
-                            [email]</p>
-                    </blockquote>
-                    <h2 id="playback-of-information" tabindex="-1"><a class="header-anchor"
-                            href="#playback-of-information">Playback of information</a></h2>
-                    <p>We show the information they gave us:</p>
-                    <ul>
-                        <li>full name</li>
-                        <li>TRN</li>
-                        <li>date of birth</li>
-                        <li>email address</li>
-                    </ul>
-                    <p>We do not show their National Insurance number, even if it was given.</p>
-                    <h2 id="shared-email-addresses" tabindex="-1"><a class="header-anchor"
-                            href="#shared-email-addresses">Shared email addresses</a></h2>
-                    <p>We know that users have registered using generic school email addresses such as “head@” or
-                        “headteacher@”, in these cases the headteacher could leave their job, and a new person join –
-                        the new person would get the same email address. If they want to register for an NPQ, they
-                        should not see the previous headteacher’s personal details. There are over 200 instances of
-                        this.</p>
-                    <p>A similar issue, though a lot less likely, can happen if someone with a common name (for example
-                        John Smith) leaves, and someone else with the same name joins and is given the same email
-                        instead of a unique one. This will depend on IT policy.</p>
-                    <p>We’ve added the date of birth check as an easy to complete way of confirming they are who they
-                        say they are, avoiding immediately showing personal details.</p>
-                    <h2 id="asking-questions-again" tabindex="-1"><a class="header-anchor"
-                            href="#asking-questions-again">Asking questions again</a></h2>
-                    <p>Following the confirmation of identity we ask all the same questions again (ie the country they
-                        work in, if they work in a school, which school they work in). We do this to cover any edge
-                        cases where information could have changed – changes of circumstance, school, course and
-                        provider.</p>
-                    <h3 id="optimising-for-repeat-use" tabindex="-1"><a class="header-anchor"
-                            href="#optimising-for-repeat-use">Optimising for repeat use</a></h3>
-                    <p>These questions can be further optimised – for example – if we know they work in a school, and
-                        which school they work in, we can ask if they still work there, and skip some of the original
-                        questions. But we can deliver this later.</p>
-                </div> -->
-                <p>The Asset tag details are a crucial part of the user journey.</p>
-                <p>The existing design wasn't clear at all for users to understand what various terms meant.</p>
-                <p>Asset tag details were redesigned to highlight important terms using GDS components to display
-                    detailed information.</p>
+                    <h2>Design solution</h2>
+                    <p>The tactical resolution was to change the hint text around the input field to describe how the
+                        user would be contacted by the partner at a later date.</p>
+                    <p>The longer term and correct solution would be to create design solution much like the <a
+                            href="/design-history/chromebooks-interaction">Chromebooks interaction future design</a>,
+                        and include a more intuitive way to capture multiple lines of data in the interface.</p>
 
-                <section class="app-screenshots app-prose govuk-!-margin-top-9" id="screenshots">
-                    <div class="govuk-!-display-none-print">
-                        <h2 tabindex="-1">
-                            <a class="header-anchor" href="#screenshots">Screenshots</a>
-                        </h2>
-                        <!-- <ul class="govuk-list app-screenshots__contents">
-                            <li><a href="#are-you-user">Are you [user]?</a></li>
-                            <li><a href="#yes-confirm-your-date-of-birth">Yes – Confirm your date of birth</a></li>
-                            <li><a href="#no-email-address-associated-with-someone-else">No – Email address associated
-                                    with someone else</a></li>
-                            <li><a href="#are-details-still-correct">Are details still correct?</a></li>
-                            <li><a href="#no-contact-support-about-changing-details">No – Contact support about changing
-                                    details</a></li>
-                            <li><a href="#check-your-answers-and-confirm">Check your answers and confirm</a></li>
-                        </ul> -->
-                    </div>
-                    <!-- <figure class="app-screenshots__screenshot" id="are-you-user">
-                        <h3 tabindex="-1">
-                            <a class="header-anchor" href="#are-you-user">Are you [user]?</a>
-                        </h3>
-                        <a href="01-are-you.png"><img src="01-are-you.png" alt="Screenshot of Are you [user]?"></a>
-                    </figure>
-                    <figure class="app-screenshots__screenshot" id="yes-confirm-your-date-of-birth">
-                        <h3 tabindex="-1">
-                            <a class="header-anchor" href="#yes-confirm-your-date-of-birth">Yes – Confirm your date of
-                                birth</a>
-                        </h3>
-                        <a href="03-confirm-your-date-of-birth.png"><img src="03-confirm-your-date-of-birth.png"
-                                alt="Screenshot of Yes – Confirm your date of birth"></a>
-                    </figure>
-                    <figure class="app-screenshots__screenshot" id="no-email-address-associated-with-someone-else">
-                        <h3 tabindex="-1">
-                            <a class="header-anchor" href="#no-email-address-associated-with-someone-else">No – Email
-                                address associated with someone else</a>
-                        </h3>
-                        <a href="02-email-address-associated-with-someone-else.png"><img
-                                src="02-email-address-associated-with-someone-else.png"
-                                alt="Screenshot of No – Email address associated with someone else"></a>
-                    </figure>
-                    <figure class="app-screenshots__screenshot" id="are-details-still-correct">
-                        <h3 tabindex="-1">
-                            <a class="header-anchor" href="#are-details-still-correct">Are details still correct?</a>
-                        </h3>
-                        <a href="04-registered-before-with-these-details.png"><img
-                                src="04-registered-before-with-these-details.png"
-                                alt="Screenshot of Are details still correct?"></a>
-                    </figure>
-                    <figure class="app-screenshots__screenshot" id="no-contact-support-about-changing-details">
-                        <h3 tabindex="-1">
-                            <a class="header-anchor" href="#no-contact-support-about-changing-details">No – Contact
-                                support about changing details</a>
-                        </h3>
-                        <a href="05-contact-support-about-changing-details.png"><img
-                                src="05-contact-support-about-changing-details.png"
-                                alt="Screenshot of No – Contact support about changing details"></a>
-                    </figure>
-                    <figure class="app-screenshots__screenshot" id="check-your-answers-and-confirm">
-                        <h3 tabindex="-1">
-                            <a class="header-anchor" href="#check-your-answers-and-confirm">Check your answers and
-                                confirm</a>
-                        </h3>
-                        <a href="06-check-your-answers-and-confirm.png"><img src="06-check-your-answers-and-confirm.png"
-                                alt="Screenshot of Check your answers and confirm"></a>
-                    </figure> -->
-                </section>
 
+                    <section class="app-screenshots app-prose govuk-!-margin-top-9" id="screenshots">
+                        <div class="govuk-!-display-none-print">
+                            <h2 tabindex="-1">
+                                <a class="header-anchor" href="#screenshots">Screenshots</a>
+                            </h2>
+                            <ul class="govuk-list app-screenshots__contents">
+                                <li><a href="#chromebooks-ordering">Chromebooks multi domains</a></li>
+                            </ul>
+                        </div>
+                        <figure class="app-screenshots__screenshot" id="chromebooks-ordering">
+                            <h3 tabindex="-1">
+                                <a class="header-anchor" href="#chromebooks-ordering">Chromebooks multi domains</a>
+                            </h3>
+                            <a href="/public/images/chromebook-multiple-domains.png"><img
+                                    src="/public/images/chromebook-multiple-domains.png"
+                                    alt="Screenshot of Chromebooks multiple domains"></a>
+                        </figure>
+
+                    </section>
+
+                </div>
             </div>
 
             <div class="govuk-grid-column-one-third">
@@ -9614,9 +9512,9 @@ text: "Asset tag view"
         </div>
     </div>
 
-    <footer class="app-article__footer">
+    <!-- <footer class="app-article__footer">
         Published <time datetime="2022-01-11T00:00:00.000Z">11 January 2022</time><br>
-    </footer>
+    </footer> -->
 </article>
 
 

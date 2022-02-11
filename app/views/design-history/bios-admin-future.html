@@ -12,7 +12,7 @@ text: "Get help with tech design history",
 href: "/design-history"
 },
 {
-text: "Order screens"
+text: "Further BIOS/admin improvements (user testing)"
 }
 
 ]
@@ -9455,7 +9455,7 @@ text: "Order screens"
 
 <article class="app-article">
     <header class="app-article__header govuk-!-width-two-thirds">
-        <h1 class="app-article__title govuk-heading-xl">Order screens</h1>
+        <h1 class="app-article__title govuk-heading-xl">Further BIOS/admin improvements (user testing)</h1>
     </header>
 
     <div class="app-article__body">
@@ -9463,32 +9463,33 @@ text: "Order screens"
             <div class="govuk-grid-column-two-thirds">
                 <div class="app-prose">
                     <h2>Design task</h2>
-                    <p>Over the Christmas 2021 period the service deliveries were planned to be paused over 2 weeks.</p>
-                    <p>We conducted user research to understand what users would expect from the service over the
-                        two-week period and found that, as most settings would be closed, there would be little appetite
-                        for using the service.</p>
-                    <p>The problem was:</p>
+                    <p>The BIOS/admin area of the service is where users have to understand and perform certain tasks
+                        for there devices.</p>
+                    <p>The Support Portal was been to be closed and the technical information would then be handled by
+                        the service.</p>
+                    <p>The main problems:</p>
                     <ul>
-                        <li>We needed a design that had to fit into the exisiting code without too many changes, sd they
-                            were technical limitations</li>
-                        <li>Needed a design component that was GDS compliant</li>
-                        <li>Had to be easily visible so users knew what the service status was</li>
+                        <li>it was difficult for users to make heads and tails of all the technical content</li>
+                        <li>some of the content needed more detailed information to describe what certain technical
+                            terms meant</li>
+                        <li>user testing revealed many other issues around guidance and design</li>
                     </ul>
 
                     <hr>
                     <h2>Design solution</h2>
-                    <p>The design solution although simple was the result of much research and design thinking
-                        collaboration between design and development.</p>
-                    <p>The outcome was to use the <a
-                            href="https://design-system.service.gov.uk/components/warning-text/" target="_blank">Warning
-                            text component</a> in a shaded (compliant grey) box at the top of the screen.</p>
-                    <p>This solution not only solved this particular design issue:</p>
+                    <p>The initial design used the <a
+                            href="https://design-system.service.gov.uk/components/summary-list/" target="_blank">Summary
+                            list component</a>, which was previously worked to some extent.</p>
+                    <p>The new design consisted of setting out the information in a new section for each part, with
+                        associated dropdown help text, explaining what each term means, why it’s important and when a
+                        user might need it.</p>
+                    <p>The design solution entailed using the <a
+                            href="https://design-system.service.gov.uk/components/details/" target="_blank">Details
+                            component</a> at the bottom of each new section.</p>
+                    <p>The new solution was well received by users:</p>
                     <ul>
-                        <li>it has also provided a way for the service to now broadcast other important messages</li>
-                        <li>the component styling can easily integrate with <a
-                                href="https://design-system.service.gov.uk/styles/colour/">GOV.UK colour palette</a>
-                        </li>
-                        <li>solved a wider issue of global messaging across the service</li>
+                        <li>the design and content was so much more easier to read and understand</li>
+                        <li>the page design wasn't daunting to look at</li>
                     </ul>
 
 
@@ -9498,16 +9499,23 @@ text: "Order screens"
                                 <a class="header-anchor" href="#screenshots">Screenshots</a>
                             </h2>
                             <ul class="govuk-list app-screenshots__contents">
-                                <li><a href="#chrismas-closure">Chrismas closure</a></li>
+                                <li><a href="#BIOS-admin">BIOS-admin old design</a></li>
+                                <li><a href="#BIOS-admin">BIOS-admin new design</a></li>
                             </ul>
                         </div>
-                        <figure class="app-screenshots__screenshot" id="chrismas-closure">
+                        <figure class="app-screenshots__screenshot" id="BIOS-admin">
                             <h3 tabindex="-1">
-                                <a class="header-anchor" href="#chrismas-closure">Chrismas closure</a>
+                                <a class="header-anchor" href="#BIOS-admin">BIOS/admin older design</a>
                             </h3>
-                            <a href="/public/images/christmas-closure.png"><img
-                                    src="/public/images/christmas-closure.png"
-                                    alt="Screenshot of Christmas closure"></a>
+                            <a href="/public/images/bios-admin-1.png"><img src="/public/images/bios-admin-1.png"
+                                    alt="Screenshot of BIOS/admin old design"></a>
+                        </figure>
+                        <figure class="app-screenshots__screenshot" id="BIOS-admin-new">
+                            <h3 tabindex="-1">
+                                <a class="header-anchor" href="#BIOS-admin-new">BIOS/admin new design</a>
+                            </h3>
+                            <a href="/public/images/bios-admin-2.png"><img src="/public/images/bios-admin-2.png"
+                                    alt="Screenshot of BIOS/admin new design"></a>
                         </figure>
 
                     </section>
