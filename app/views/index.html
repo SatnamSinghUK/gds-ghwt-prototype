@@ -110,118 +110,30 @@ Getting help with technology
                         </a>
                     </td>
                 </tr>
-                {# <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">BIOS Unlock designs <strong class="govuk-tag govuk-tag--blue">
-                                WIP
-                            </strong>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">BIOS Unlock designs
                     </th>
                     <td class="govuk-table__cell">
                         <a class="govuk-button" href="/BIOS-unlock" style="margin: 0">
                             View
                         </a>
                     </td>
-                </tr> #}
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" style="vertical-align: middle">P45 (order summary) designs
+                    </th>
+                    <td class="govuk-table__cell">
+                        <a class="govuk-button" href="/P45" style="margin: 0">
+                            View
+                        </a>
+                    </td>
+                </tr>
             </tbody>
         </table>
-        {#
-        <br><br>
-        <h2 class="govuk-heading-m">Prototype change log</h2>
-        {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
-        {{ govukSummaryList({
-        rows: [
-        {
-        key: {
-        text: "23/9/2021"
-        },
-        value: {
-        text: "School order screen"
-        },
-        actions: {
-        items: [
-        {
-        href: "school-order",
-        text: "View",
-        visuallyHiddenText: "view"
-        }
-        ]
-        }
-        },
-        {
-        key: {
-        text: "22/9/2021"
-        },
-        value: {
-        text: "Chromebook journey improvements"
-        },
-        actions: {
-        items: [
-        {
-        href: "school-chromebook",
-        text: "View",
-        visuallyHiddenText: "view"
-        }
-        ]
-        }
-        },
-        {
-        key: {
-        text: "15/9/2021"
-        },
-        value: {
-        text: "Heroku setup for prototype initiated"
-        },
-        actions: {
-        items: [
-        {
-        href: "",
-        text: "",
-        visuallyHiddenText: "view"
-        }
-        ]
-        }
-        },
-        {
-        key: {
-        text: "14/9/2021"
-        },
-        value: {
-        html: "GDS Prototype repo cloned"
-        },
-        actions: {
-        items: [
-        {
-        href: "",
-        text: "",
-        visuallyHiddenText: "view"
-        }
-        ]
-        }
-        }
-        ]
-        }) }} #}
 
     </div>
-    <div class="govuk-grid-column-one-third">
 
-        <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
-
-        <aside class="app-related-items" role="complementary">
-            <h2 class="govuk-heading-m" id="subsection-title">
-                Other GHWT prototypes
-            </h2>
-            <nav role="navigation" aria-labelledby="subsection-title">
-                <ul class="govuk-list govuk-!-font-size-16">
-                    <li>
-                        <a href="/testing" class="govuk-link govuk-!-font-weight-bold">
-                            Testing prototype
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-
-    </div>
 </div>
 
 

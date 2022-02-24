@@ -4,17 +4,7 @@
 {% block pageTitle %}
 Getting help with technology
 {% endblock %}
-{% block breadCrumbs %}
-{{ govukBreadcrumbs({
-items: [
-{
-text: "Get help with tech design history",
-href: ""
-}
 
-]
-}) }}
-{% endblock %}
 {% block content %}
 
 <style>
@@ -9450,143 +9440,70 @@ href: ""
     }
 </style>
 
-<div class="">
-    <div class="govuk-width-container">
+<style>
+    .app-phase-banner__wrapper,
+    #navigation,
+    footer {
+        display: none;
+    }
 
+    .email-mockup {
+        border: 5px solid #f3f2f1;
+        padding: 30px;
+    }
+</style>
 
+<article class="app-article">
+    <header class="app-article__header govuk-!-width-two-thirds">
+        <h1 class="app-article__title govuk-heading-xl">Email (online download idea)</h1>
+    </header>
+
+    <div class="app-article__body">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <h1 class="app-masthead__title">
-                    GHWT - Device details (Ideas)
-                </h1>
-                <!-- <div class="app-masthead__description">
-                    <p>This Design History page describes and catalogues design changes to the service since 2021.</p>
-                    <p>Each of the posts explain the design task and the accompanying design solution utilised in order
-                        to solve each of the design tasks raised.</p>
-                </div> -->
-            </div>
-            <div class="govuk-grid-column-one-third">
+                <div class="email-mockup">
+                    <p>Dear [name]</p>
+                    <h2 class="govuk-heading-m">Access your Get help with technology (GHwT) device details</h2>
+                    <p>Read this email carefully and keep it safe – it tells you how you’ll access information about
+                        your devices in future.</p>
+                    <h2 class="govuk-heading-m">Accessing your GHwT device details</h2>
+
+                    <p>The Get help with technology programme has provided your organisation with devices as part of
+                        Department for Education’s
+                        (DfE) response to the pandemic.</p>
+                    <p>To make sure you have access to your ordering data beyond the lifetime of the service, a summary
+                        of your ordering data
+                        is now available using the download link below.</p>
+
+                    <p><a href="bios-unlock-tabbed">View device details</a></p>
+
+                    <h2 class="govuk-heading-m">Ownership and safeguarding</h2>
+
+                    <p>Educational settings own the devices, not DfE. There’s more detailed information on device
+                        ownership on the Who owns the
+                        devices page.</p>
+
+                    <p>You’re responsible for managing the devices and making sure they’re safe for users. That means
+                        setting up management and
+                        safeguarding measures to avoid risks to the children and young people in your care.</p>
+
+                    <p>You can access the guidance pages on the GHwT website and if you have any questions or concerns,
+                        you can contact us on:</p>
+
+                    <p><a href="mailto:COVID.TECHNOLOGY@education.gov.uk">COVID.TECHNOLOGY@education.gov.uk</a></p>
+
+                    <p>Regards,</p>
+
+                    <p><strong>The Get help with technology team</strong></p>
+
+
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<div class="govuk-width-container">
-    <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-        <div class="app-prose"></div>
-
-        <div class="govuk-grid-row">
-
-            <section class="govuk-grid-column-two-thirds">
-                <h2 class="govuk-heading-l govuk-!-font-size-27">
-                    Online (service area idea)
-                </h2>
-                <ol class="app-document-list govuk-!-margin-bottom-6">
-                    <li class="app-document-list__item">
-                        <h2 class="app-document-list__item-title">
-                            <a class="govuk-link" href="BIOS-unlock/bios-unlock-tabbed-email">
-                                Email magic link (idea)
-                            </a>
-                        </h2>
-                        <p class="app-document-list__item-description">
-                            The service closure means a suitable solution to show users BIOS information is required
-                        </p>
-                        <ul class="app-document-list__item-metadata">
-                            <li class="app-document-list__attribute">
-                                <time datetime="2022-01-11T00:00:00.000Z">February 2022</time>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="app-document-list__item">
-                        <h2 class="app-document-list__item-title">
-
-                            <a class="govuk-link" href="BIOS-unlock/sign-in-bios-tabbed">
-                                Log in (idea)
-                            </a>
-                        </h2>
-                        <p class="app-document-list__item-description">Design thinking, planning around the closure of
-                            the service for March 2022</p>
-                        <ul class="app-document-list__item-metadata">
-                            <li class="app-document-list__attribute">
-                                <time datetime="2022-01-11T00:00:00.000Z">February 2022</time>
-                            </li>
-                        </ul>
-                    </li>
-
-                </ol>
-                <hr>
-            </section>
-
-            <section class="govuk-grid-column-two-thirds">
-                <h2 class="govuk-heading-l govuk-!-font-size-27 govuk-!-margin-top-9">
-                    Download details
-                </h2>
-                <ol class="app-document-list govuk-!-margin-bottom-6">
-                    <li class="app-document-list__item">
-                        <h2 class="app-document-list__item-title">
-                            <a class="govuk-link" href="BIOS-unlock/bios-unlock-download-email">
-                                Email magic link (idea)
-                            </a>
-                        </h2>
-                        <p class="app-document-list__item-description">
-                            The service closure means a suitable solution to show users BIOS information is required
-                        </p>
-                        <ul class="app-document-list__item-metadata">
-                            <li class="app-document-list__attribute">
-                                <time datetime="2022-01-11T00:00:00.000Z">February 2022</time>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="app-document-list__item">
-                        <h2 class="app-document-list__item-title">
-
-                            <a class="govuk-link" href="BIOS-unlock/sign-in-bios-download">
-                                Log in (idea)
-                            </a>
-                        </h2>
-                        <p class="app-document-list__item-description">Design thinking, planning around the closure of
-                            the service for March 2022</p>
-                        <ul class="app-document-list__item-metadata">
-                            <li class="app-document-list__attribute">
-                                <time datetime="2022-01-11T00:00:00.000Z">February 2022</time>
-                            </li>
-                        </ul>
-                    </li>
-
-                </ol>
-                <hr>
-            </section>
 
 
-            <!-- <div class="govuk-grid-column-one-third">
-                <aside class="app-related govuk-!-display-none-print" role="complementary">
-                    <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
-                    <nav role="navigation" aria-labelledby="-title">
-                        <ul class="app-related__list">
-                            <li class="app-related__list-item">
-                                <h3 class="app-related__list-item-title">
-                                    <a class="govuk-link" href="https://ghwt-gds-prototype.herokuapp.com/"
-                                        target="_blank">Prototype</a>
-                                </h3>
-                            </li>
-                            <li class="app-related__list-item">
-                                <h3 class="app-related__list-item-title">
-                                    <a class="govuk-link" href="https://github.com/SatnamSinghUK/gds-ghwt-prototype"
-                                        target="_blank">Prototype
-                                        on Github</a>
-                                </h3>
-                            </li>
-                        </ul>
-                    </nav>
-                </aside>
-
-            </div> -->
-
-        </div>
-    </main>
-</div>
+</article>
 
 
 

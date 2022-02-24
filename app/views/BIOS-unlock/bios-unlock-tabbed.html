@@ -4,7 +4,7 @@
 {% block pageTitle %}
 Getting help with technology
 {% endblock %}
-{% block breadCrumbs %}
+{# {% block breadCrumbs %}
 {{ govukBreadcrumbs({
 items: [
 {
@@ -17,7 +17,7 @@ text: "BIOS unlock tabbed"
 
 ]
 }) }}
-{% endblock %}
+{% endblock %} #}
 {% block content %}
 
 <style>
@@ -9453,6 +9453,67 @@ text: "BIOS unlock tabbed"
     }
 </style>
 
+<style>
+    .app-phase-banner__wrapper,
+    #navigation {
+        display: none;
+    }
+</style>
+
+<style>
+    .app-banner {
+        color: #0b0c0c;
+        padding: 15px;
+        margin-bottom: 30px;
+        border: 5px solid #00703c;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    .app-banner h2 {
+        margin-bottom: 0;
+    }
+
+    .app-related__list,
+    .app-table-of-contents ul,
+    .govuk-list {
+        margin-bottom: 20px;
+        font-size: 1.1875rem;
+        line-height: 1.3157894737;
+    }
+
+    .app-table-of-contents ul>li,
+    .govuk-list--bullet>li,
+    .govuk-list--number>li {
+        margin-bottom: 5px;
+    }
+
+    .app-emphasis-link {
+        display: inline-block;
+        padding: 10px 20px 10px 16px;
+        border-left: 4 px solid #505a5f;
+        background-color: #f3f2f1;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .app-card {
+        background-color: #f3f2f1;
+        display: block;
+        text-decoration: none;
+        font-family: GDS Transport, arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+        font-size: 1.1875rem;
+        line-height: 1.3157894737;
+        padding: 20px;
+    }
+</style>
+
 <article class="app-article">
     <header class="app-article__header govuk-!-width-two-thirds">
         <h1 class="app-article__title govuk-heading-xl">Device details</h1>
@@ -9464,242 +9525,504 @@ text: "BIOS unlock tabbed"
                 {% from "govuk/components/tabs/macro.njk" import govukTabs %}
                 {% from "govuk/components/table/macro.njk" import govukTable %}
 
-                {% set pastDayHtml %}
+                {% set tab1 %}
+                <h2 class="govuk-heading-l">Order History</h2>
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <div class="app-card govuk-!-margin-bottom-9">
+                            <!-- <h2 class="govuk-heading-l">
+                                Order summary
+                            </h2> -->
+
+                            <!-- <h2>
+                                Ironston High School has a total allocation of 83 devices for academic year
+                                2021/22.<br>You’ve
+                                ordered 44 devices and 6 routers in academic year 2021/22
+                            </h2> -->
+
+                            {% from "govuk/components/table/macro.njk" import govukTable %}
+
+                            {{ govukTable({
+
+                            captionClasses: "govuk-table__caption--m",
+                            firstCellIsHeader: true,
+                            head: [
+                            {
+                            text: "Year"
+                            },
+                            {
+                            text: "Devices ordered"
+                            }
+                            ],
+                            rows: [
+                            [
+                            {
+                            text: "2022"
+                            },
+                            {
+                            text: "300"
+                            }
+                            ],
+                            [
+                            {
+                            text: "2021"
+                            },
+                            {
+                            text: "540"
+                            }
+                            ],
+                            [
+                            {
+                            text: "2020"
+                            },
+                            {
+                            text: "280"
+                            }
+                            ]
+                            ]
+                            }) }}
+
+                            {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                            {{ govukButton({
+                            text: "Download order history"
+                            }) }}
+                        </div>
+                    </div>
+                </div>
+
+
+                <table id="ordering-schools" class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header app-schools-table__column-40">School or college</th>
+                            <th class="govuk-table__header app-schools-table__column-40">Who will order?</th>
+                            <th class="govuk-table__header app-schools-table__column-20"><span
+                                    class="govuk-visually-hidden">Status</span></th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/responsible-body/devices/schools/100219">Bluemeadow High
+                                    (100219)</a>
+                                <br>
+                                Other
+                            </td>
+                            <td class="govuk-table__cell">
+                                Local authority
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--nowrap">
+                                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/responsible-body/devices/schools/100343">Bluemeadow
+                                    Secondary College
+                                    (100343)</a>
+                                <br>
+                                Other
+                            </td>
+                            <td class="govuk-table__cell">
+                                Local authority
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/responsible-body/devices/schools/100216">Brighthurst
+                                    Secondary College
+                                    (100216)</a>
+                                <br>
+                                Other
+                            </td>
+                            <td class="govuk-table__cell">
+                                Local authority
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--nowrap">
+                                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/responsible-body/devices/schools/100356">Iceborough High
+                                    (100356)</a>
+                                <br>
+                                Other
+                            </td>
+                            <td class="govuk-table__cell">
+                                Local authority
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/responsible-body/devices/schools/100358">Ironbarrow High
+                                    (100358)</a>
+                                <br>
+                                Other
+                            </td>
+                            <td class="govuk-table__cell">
+                                Local authority
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/responsible-body/devices/schools/100217">Ironston High
+                                    School (100217)</a>
+                                <br>
+                                Other
+                            </td>
+                            <td class="govuk-table__cell">
+                                Local authority
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--nowrap">
+                                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/responsible-body/devices/schools/100348">Lakeacre High
+                                    School (100348)</a>
+                                <br>
+                                Other
+                            </td>
+                            <td class="govuk-table__cell">
+                                Local authority
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/responsible-body/devices/schools/100215">Lakeacre Secondary
+                                    College
+                                    (100215)</a>
+                                <br>
+                                Other
+                            </td>
+                            <td class="govuk-table__cell">
+                                Local authority
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--nowrap">
+                                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/responsible-body/devices/schools/100359">Marblewald
+                                    Secondary College
+                                    (100359)</a>
+                                <br>
+                                Other
+                            </td>
+                            <td class="govuk-table__cell">
+                                Local authority
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--nowrap">
+
+
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="/responsible-body/devices/schools/100214">Ostbarrow
+                                    Secondary College
+                                    (100214)</a>
+                                <br>
+                                Other
+                            </td>
+                            <td class="govuk-table__cell">
+                                Local authority
+                            </td>
+                            <td class="govuk-table__cell govuk-table__cell--nowrap">
+                                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% endset -%}
+
+                {% set tab2 %}
                 <h2 class="govuk-heading-l">BIOS details</h2>
-                {{ govukTable({
-                head: [
-                {
-                text: "Case manager"
-                },
-                {
-                text: "Cases opened"
-                },
-                {
-                text: "Cases closed"
-                }
-                ],
-                rows: [
-                [
-                {
-                text: "David Francis"
-                },
-                {
-                text: "3"
-                },
-                {
-                text: "0"
-                }
-                ],
-                [
-                {
-                text: "Paul Farmer"
-                },
-                {
-                text: "1"
-                },
-                {
-                text: "0"
-                }
-                ],
-                [
-                {
-                text: "Rita Patel"
-                },
-                {
-                text: "2"
-                },
-                {
-                text: "0"
-                }
-                ]
-                ]
-                }) }}
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-4">
+                        <p class="govuk-body">This page shows you all the devices associated with your organisation.
+                            You can also search our database for a device by entering its serial number.</p>
+                    </div>
+                </div>
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-half">
+                        <div class="app-card govuk-!-margin-bottom-5">
+                            <h3 class="govuk-heading-m">
+                                Search any serial number in our database
+                            </h3>
+
+                            <form action="/assets" accept-charset="UTF-8" data-remote="true" method="get">
+                                <div class="govuk-form-group"><label for="serial-number-field" class="govuk-label">Enter
+                                        a serial
+                                        number</label><input id="serial-number-field" class="govuk-input" type="text"
+                                        name="serial_number">
+                                </div>
+
+                                <button type="submit" formnovalidate="formnovalidate" class="govuk-button"
+                                    data-module="govuk-button" data-prevent-double-click="true">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="govuk-grid-column-one-half">
+                        <div class="app-card govuk-!-margin-bottom-5">
+                            <h3 class="govuk-heading-m">Download all BIOS details</h3>
+                            <p>Download all BIOS information in CSV format</p>
+
+                            {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+                            {{ govukInsetText({
+                            text: "CSV format saves important BIOS related information in one file"
+                            }) }}
+
+                            {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                            {{ govukButton({
+                            text: "Download BIOS details"
+                            }) }}
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="govuk-width-containe">
+
+
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header app-schools-table__column-20">Serial/IMEI</th>
+                                <th class="govuk-table__header app-schools-table__column-20">Model</th>
+                                <th class="govuk-table__header app-schools-table__column-20">Local Authority/Academy
+                                    Trust</th>
+                                <th class="govuk-table__header app-schools-table__column-20">School/College</th>
+                                <th class="govuk-table__header app-schools-table__column-20">View your BIOS/admin
+                                    passwords and hardware hash</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">835466</td>
+                                <td class="govuk-table__cell">TP-Link 4G LTE Mobile Wi-Fi</td>
+                                <td class="govuk-table__cell">Norfolk County Council</td>
+                                <td class="govuk-table__cell">Ironston High School</td>
+                                <td class="govuk-table__cell"><a
+                                        href="/assets/165-0b3742efaeda72c5c1a610550e1036920479c33b">Show</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">897698</td>
+                                <td class="govuk-table__cell">Dynabook TECRA A40-G-18</td>
+                                <td class="govuk-table__cell">Norfolk County Council</td>
+                                <td class="govuk-table__cell">Ironston High School</td>
+                                <td class="govuk-table__cell"><a
+                                        href="/assets/166-a5558c1c99f101d65a5e33b4ed52c35201b62f16">Show</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">735577</td>
+                                <td class="govuk-table__cell">Acer TMB118-G2-RN</td>
+                                <td class="govuk-table__cell">Norfolk County Council</td>
+                                <td class="govuk-table__cell">Ironston High School</td>
+                                <td class="govuk-table__cell"><a
+                                        href="/assets/167-29682245bfa0cbdad82665e668d5db5f18687379">Show</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">700346</td>
+                                <td class="govuk-table__cell">HP Inc ProBook X360</td>
+                                <td class="govuk-table__cell">Norfolk County Council</td>
+                                <td class="govuk-table__cell">Ironston High School</td>
+                                <td class="govuk-table__cell"><a
+                                        href="/assets/168-b9edb38c97e06177277ba23b6db4cf06c789b7b8">Show</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">881632</td>
+                                <td class="govuk-table__cell">Dynabook E-10-G-106</td>
+                                <td class="govuk-table__cell">Norfolk County Council</td>
+                                <td class="govuk-table__cell">Ironston High School</td>
+                                <td class="govuk-table__cell"><a
+                                        href="/assets/169-e1e93f39114647e5eff6480d5022ebe2ccd70d5d">Show</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">881568</td>
+                                <td class="govuk-table__cell">HP Inc ProBook X360</td>
+                                <td class="govuk-table__cell">Norfolk County Council</td>
+                                <td class="govuk-table__cell">Ironston High School</td>
+                                <td class="govuk-table__cell"><a
+                                        href="/assets/170-0b2f51718681da809980ef545b5029fa6bd65fd5">Show</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">627597</td>
+                                <td class="govuk-table__cell">HP Inc Chromebook 14 G6</td>
+                                <td class="govuk-table__cell">Norfolk County Council</td>
+                                <td class="govuk-table__cell">Ironston High School</td>
+                                <td class="govuk-table__cell"><a
+                                        href="/assets/171-54a2ed42c7d5c1bdba993ac7244492417f3765d3">Show</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">892780</td>
+                                <td class="govuk-table__cell">Tactus GeoBook GE126</td>
+                                <td class="govuk-table__cell">Norfolk County Council</td>
+                                <td class="govuk-table__cell">Ironston High School</td>
+                                <td class="govuk-table__cell"><a
+                                        href="/assets/172-1256d2ee2bf806a2e87b181deaa8ea93f36b5165">Show</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">980830</td>
+                                <td class="govuk-table__cell">Dell Dell 3100 Chromebook</td>
+                                <td class="govuk-table__cell">Norfolk County Council</td>
+                                <td class="govuk-table__cell">Ironston High School</td>
+                                <td class="govuk-table__cell"><a
+                                        href="/assets/173-eca408092d65ede739d8a595de79d1ca2a9f427b">Show</a></td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">900693</td>
+                                <td class="govuk-table__cell">Acer TMB118-G2-RN</td>
+                                <td class="govuk-table__cell">Norfolk County Council</td>
+                                <td class="govuk-table__cell">Ironston High School</td>
+                                <td class="govuk-table__cell"><a
+                                        href="/assets/164-f2d3d453568f16b8351fec944ef9a699b308ddd2">Show</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                My device does not appear in the search results
+                            </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                            Check you’ve entered the device’s serial number correctly, or try copying
+                            and pasting it into the search box. If you’re still unable to find your serial
+                            number visit
+                            <a class="govuk-link" href="/get-support">Get support</a>.
+                        </div>
+                        <div class="govuk-details__text">
+                            <a class="govuk-link" href="/devices/replace-a-faulty-device">Find out more about warranties
+                                and replacing faulty devices</a>
+                        </div>
+                        <div class="govuk-details__text">
+                            <a class="govuk-link" href="/devices/guide-to-resetting-windows-laptops-and-tablets">Guide
+                                to resetting Windows laptops and tablets</a>
+                        </div>
+                    </details>
+
+                </div>
                 {% endset -%}
 
-                {% set pastWeekHtml %}
-                <h2 class="govuk-heading-l">P45 - Order History</h2>
-                {{ govukTable({
-                head: [
-                {
-                text: "Case manager"
-                },
-                {
-                text: "Cases opened"
-                },
-                {
-                text: "Cases closed"
-                }
-                ],
-                rows: [
-                [
-                {
-                text: "David Francis"
-                },
-                {
-                text: "24"
-                },
-                {
-                text: "18"
-                }
-                ],
-                [
-                {
-                text: "Paul Farmer"
-                },
-                {
-                text: "16"
-                },
-                {
-                text: "20"
-                }
-                ],
-                [
-                {
-                text: "Rita Patel"
-                },
-                {
-                text: "24"
-                },
-                {
-                text: "27"
-                }
-                ]
-                ]
-                }) }}
+                {% set tab3 %}
+                <h2 class="govuk-heading-l">Guidance</h2>
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+                    <a class="govuk-link" href="/devices/how-to-order">How to order devices</a>
+                </h2>
+                <p class="govuk-body">
+                    Find out how to order laptops and tablets for your school or organisation.
+                </p>
+
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+                    <a class="govuk-link" href="/devices">Laptops and tablets</a>
+                </h2>
+
+                <p class="govuk-body">
+                    Find out how to set up and manage devices. Read guidance on ownership and safeguarding.
+                </p>
+
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+                    <a class="govuk-link" href="/internet-access">Internet access</a>
+                </h2>
+
+                <p class="govuk-body">
+                    Find out about funding and support for internet access.
+                </p>
+
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+                    <a class="govuk-link" href="/devices/operation-warm-welcome">Operation Warm Welcome</a>
+                </h2>
+
+                <p class="govuk-body">
+                    Find out how to order devices for children arriving under Operation Warm Welcome.
+                </p>
+
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-2" data-service-section="digital-platforms">
+                    <a class="govuk-link" href="/digital-platforms">Digital education platforms</a>
+                </h2>
+
+                <p class="govuk-body">
+                    Apply for funded support to access and use <span class="app-no-wrap">Google Workspace for Education
+                        Fundamentals</span>, or <span class="app-no-wrap">Microsoft 365 Education.</span>
+                </p>
+
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-2" data-service-section="edtech">
+                    <a class="govuk-link" href="/EdTech-demonstrator-programme">Training and support for remote and
+                        face-to-face
+                        education</a>
+                </h2>
+
+                <p class="govuk-body">
+                    Access funded advice, guidance and training from a network of schools and
+                    colleges expert in their use of technology.
+                </p>
+
                 {% endset -%}
 
-                {% set pastMonthHtml %}
+                {% set tab4 %}
                 <h2 class="govuk-heading-l">Support</h2>
-                {{ govukTable({
-                head: [
-                {
-                text: "Case manager"
-                },
-                {
-                text: "Cases opened"
-                },
-                {
-                text: "Cases closed"
-                }
-                ],
-                rows: [
-                [
-                {
-                text: "David Francis"
-                },
-                {
-                text: "98"
-                },
-                {
-                text: "95"
-                }
-                ],
-                [
-                {
-                text: "Paul Farmer"
-                },
-                {
-                text: "122"
-                },
-                {
-                text: "131"
-                }
-                ],
-                [
-                {
-                text: "Rita Patel"
-                },
-                {
-                text: "126"
-                },
-                {
-                text: "142"
-                }
-                ]
-                ]
-                }) }}
-                {% endset -%}
-
-                {% set pastYearHtml %}
-                <h2 class="govuk-heading-l">Past year</h2>
-                {{ govukTable({
-                head: [
-                {
-                text: "Case manager"
-                },
-                {
-                text: "Cases opened"
-                },
-                {
-                text: "Cases closed"
-                }
-                ],
-                rows: [
-                [
-                {
-                text: "David Francis"
-                },
-                {
-                text: "1380"
-                },
-                {
-                text: "1472"
-                }
-                ],
-                [
-                {
-                text: "Paul Farmer"
-                },
-                {
-                text: "1129"
-                },
-                {
-                text: "1083"
-                }
-                ],
-                [
-                {
-                text: "Rita Patel"
-                },
-                {
-                text: "1539"
-                },
-                {
-                text: "1265"
-                }
-                ]
-                ]
-                }) }}
+                <p>If you are still unable to find what details you are looking for, please email us.</p>
+                <p><a href="mailto:COVID.TECHNOLOGY@education.gov.uk">COVID.TECHNOLOGY@education.gov.uk</a></p>
                 {% endset -%}
 
                 {{ govukTabs({
                 items: [
                 {
-                label: "BIOS details",
+                label: "Order History",
                 id: "past-day",
                 panel: {
-                html: pastDayHtml
+                html: tab1
                 }
                 },
                 {
-                label: "Order History (P45)",
+                label: "BIOS details",
                 id: "past-week",
                 panel: {
-                html: pastWeekHtml
+                html: tab2
                 }
                 },
                 {
                 label: "Guidance",
                 id: "past-month",
                 panel: {
-                html: pastMonthHtml
+                html: tab3
                 }
                 },
                 {
                 label: "Support",
                 id: "past-year",
                 panel: {
-                html: pastYearHtml
+                html: tab4
                 }
                 }
                 ]
@@ -9713,9 +10036,9 @@ text: "BIOS unlock tabbed"
         </div>
     </div>
 
-    <footer class="app-article__footer">
+    {# <footer class="app-article__footer">
         Published <time datetime="2022-01-11T00:00:00.000Z">11 January 2022</time><br>
-    </footer>
+    </footer> #}
 </article>
 
 

@@ -4,17 +4,7 @@
 {% block pageTitle %}
 Getting help with technology
 {% endblock %}
-{% block breadCrumbs %}
-{{ govukBreadcrumbs({
-items: [
-{
-text: "Get help with tech design history",
-href: ""
-}
 
-]
-}) }}
-{% endblock %}
 {% block content %}
 
 <style>
@@ -9450,143 +9440,42 @@ href: ""
     }
 </style>
 
-<div class="">
-    <div class="govuk-width-container">
 
+<article class="app-article">
 
+    <div class="app-article__body">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                <h1 class="app-masthead__title">
-                    GHWT - Device details (Ideas)
+                <h1 class="govuk-heading-xl">
+                    Sign in
                 </h1>
-                <!-- <div class="app-masthead__description">
-                    <p>This Design History page describes and catalogues design changes to the service since 2021.</p>
-                    <p>Each of the posts explain the design task and the accompanying design solution utilised in order
-                        to solve each of the design tasks raised.</p>
-                </div> -->
-            </div>
-            <div class="govuk-grid-column-one-third">
+
+                <div class="govuk-form-group"><label for="sign-in-token-form-email-address-field"
+                        class="govuk-label govuk-label--s">Email address</label>
+                    <div class="govuk-hint" id="sign-in-token-form-email-address-hint">Enter your email address, and
+                        if you have an account, we’ll send you a link to sign in.</div><input
+                        id="sign-in-token-form-email-address-field" class="govuk-input"
+                        aria-describedby="sign-in-token-form-email-address-hint" required="required" type="email"
+                        name="sign_in_token_form[email_address]">
+                </div>
+
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Change email
+                            address for your account</span></summary>
+                    <div class="govuk-details__text">
+                        <p>
+                            A colleague with access to the service can update your email address for you. If a
+                            colleague cannot do this, you can <a class="govuk-link"
+                                href="mailto:COVID.TECHNOLOGY@education.gov.uk?subject=Change%20my%20email%20address">contact
+                                us</a> to change it instead.
+                        </p>
+                    </div>
+                </details>
+                <a href="bios-unlock-download.html" class="govuk-button">Continue</a>
             </div>
         </div>
     </div>
-</div>
-
-<div class="govuk-width-container">
-    <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-        <div class="app-prose"></div>
-
-        <div class="govuk-grid-row">
-
-            <section class="govuk-grid-column-two-thirds">
-                <h2 class="govuk-heading-l govuk-!-font-size-27">
-                    Online (service area idea)
-                </h2>
-                <ol class="app-document-list govuk-!-margin-bottom-6">
-                    <li class="app-document-list__item">
-                        <h2 class="app-document-list__item-title">
-                            <a class="govuk-link" href="BIOS-unlock/bios-unlock-tabbed-email">
-                                Email magic link (idea)
-                            </a>
-                        </h2>
-                        <p class="app-document-list__item-description">
-                            The service closure means a suitable solution to show users BIOS information is required
-                        </p>
-                        <ul class="app-document-list__item-metadata">
-                            <li class="app-document-list__attribute">
-                                <time datetime="2022-01-11T00:00:00.000Z">February 2022</time>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="app-document-list__item">
-                        <h2 class="app-document-list__item-title">
-
-                            <a class="govuk-link" href="BIOS-unlock/sign-in-bios-tabbed">
-                                Log in (idea)
-                            </a>
-                        </h2>
-                        <p class="app-document-list__item-description">Design thinking, planning around the closure of
-                            the service for March 2022</p>
-                        <ul class="app-document-list__item-metadata">
-                            <li class="app-document-list__attribute">
-                                <time datetime="2022-01-11T00:00:00.000Z">February 2022</time>
-                            </li>
-                        </ul>
-                    </li>
-
-                </ol>
-                <hr>
-            </section>
-
-            <section class="govuk-grid-column-two-thirds">
-                <h2 class="govuk-heading-l govuk-!-font-size-27 govuk-!-margin-top-9">
-                    Download details
-                </h2>
-                <ol class="app-document-list govuk-!-margin-bottom-6">
-                    <li class="app-document-list__item">
-                        <h2 class="app-document-list__item-title">
-                            <a class="govuk-link" href="BIOS-unlock/bios-unlock-download-email">
-                                Email magic link (idea)
-                            </a>
-                        </h2>
-                        <p class="app-document-list__item-description">
-                            The service closure means a suitable solution to show users BIOS information is required
-                        </p>
-                        <ul class="app-document-list__item-metadata">
-                            <li class="app-document-list__attribute">
-                                <time datetime="2022-01-11T00:00:00.000Z">February 2022</time>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="app-document-list__item">
-                        <h2 class="app-document-list__item-title">
-
-                            <a class="govuk-link" href="BIOS-unlock/sign-in-bios-download">
-                                Log in (idea)
-                            </a>
-                        </h2>
-                        <p class="app-document-list__item-description">Design thinking, planning around the closure of
-                            the service for March 2022</p>
-                        <ul class="app-document-list__item-metadata">
-                            <li class="app-document-list__attribute">
-                                <time datetime="2022-01-11T00:00:00.000Z">February 2022</time>
-                            </li>
-                        </ul>
-                    </li>
-
-                </ol>
-                <hr>
-            </section>
-
-
-            <!-- <div class="govuk-grid-column-one-third">
-                <aside class="app-related govuk-!-display-none-print" role="complementary">
-                    <h2 class="govuk-heading-s govuk-!-margin-bottom-2" id="-title">Related links</h2>
-                    <nav role="navigation" aria-labelledby="-title">
-                        <ul class="app-related__list">
-                            <li class="app-related__list-item">
-                                <h3 class="app-related__list-item-title">
-                                    <a class="govuk-link" href="https://ghwt-gds-prototype.herokuapp.com/"
-                                        target="_blank">Prototype</a>
-                                </h3>
-                            </li>
-                            <li class="app-related__list-item">
-                                <h3 class="app-related__list-item-title">
-                                    <a class="govuk-link" href="https://github.com/SatnamSinghUK/gds-ghwt-prototype"
-                                        target="_blank">Prototype
-                                        on Github</a>
-                                </h3>
-                            </li>
-                        </ul>
-                    </nav>
-                </aside>
-
-            </div> -->
-
-        </div>
-    </main>
-</div>
+</article>
 
 
 
