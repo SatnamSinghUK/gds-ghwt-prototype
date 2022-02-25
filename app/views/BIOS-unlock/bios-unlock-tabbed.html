@@ -9512,6 +9512,11 @@ text: "BIOS unlock tabbed"
         line-height: 1.3157894737;
         padding: 20px;
     }
+
+    .govuk-accordion__open-all {
+        font-weight: bold !important;
+        margin-bottom: 20px !important;
+    }
 </style>
 
 <article class="app-article">
@@ -9530,248 +9535,659 @@ text: "BIOS unlock tabbed"
 
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-two-thirds">
-                        <div class="app-card govuk-!-margin-bottom-9">
-                            <!-- <h2 class="govuk-heading-l">
-                                Order summary
-                            </h2> -->
+                        <p>You can view and navigate through your Order History by order number.</p>
+                    </div>
+                </div>
 
-                            <!-- <h2>
-                                Ironston High School has a total allocation of 83 devices for academic year
-                                2021/22.<br>You’ve
-                                ordered 44 devices and 6 routers in academic year 2021/22
-                            </h2> -->
+                {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
-                            {% from "govuk/components/table/macro.njk" import govukTable %}
+                {{ govukAccordion({
+                id: "accordion-default",
+                items: [
+                {
+                heading: {
+                text: "Order: ert5554cvxcv"
+                },
+                content: {
+                html: "<table class='govuk-table'>
 
-                            {{ govukTable({
+                    <thead class='govuk-table__head'>
+                        <tr class='govuk-table__row'>
 
-                            captionClasses: "govuk-table__caption--m",
-                            firstCellIsHeader: true,
-                            head: [
-                            {
-                            text: "Year"
-                            },
-                            {
-                            text: "Devices ordered"
-                            }
-                            ],
-                            rows: [
-                            [
-                            {
-                            text: "2022"
-                            },
-                            {
-                            text: "300"
-                            }
-                            ],
-                            [
-                            {
-                            text: "2021"
-                            },
-                            {
-                            text: "540"
-                            }
-                            ],
-                            [
-                            {
-                            text: "2020"
-                            },
-                            {
-                            text: "280"
-                            }
-                            ]
-                            ]
+                            <th scope='col' class='govuk-table__header'>Device</th>
+
+                            <th scope='col' class='govuk-table__header'>Serial</th>
+
+                            <th scope='col' class='govuk-table__header'>Type</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody class='govuk-table__body'>
+
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+
+
+
+                    </tbody>
+                </table>"
+                }
+                },
+                {
+                heading: {
+                text: "Order: ert432fdfd"
+                },
+                content: {
+                html: "<table class='govuk-table'>
+
+
+
+
+                    <thead class='govuk-table__head'>
+                        <tr class='govuk-table__row'>
+
+                            <th scope='col' class='govuk-table__header'>Device</th>
+
+                            <th scope='col' class='govuk-table__header'>Serial</th>
+
+                            <th scope='col' class='govuk-table__header'>Type</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody class='govuk-table__body'>
+
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+
+
+
+                    </tbody>
+                </table>"
+                }
+                },
+                {
+                heading: {
+                text: "Order: ewe88425rtedf"
+                },
+                content: {
+                html: "<table class='govuk-table'>
+
+
+
+
+                    <thead class='govuk-table__head'>
+                        <tr class='govuk-table__row'>
+
+                            <th scope='col' class='govuk-table__header'>Device</th>
+
+                            <th scope='col' class='govuk-table__header'>Serial</th>
+
+                            <th scope='col' class='govuk-table__header'>Type</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody class='govuk-table__body'>
+
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+                        <tr class='govuk-table__row'>
+
+
+
+                            <td class='govuk-table__cell'>Acer TMB-118B</td>
+
+
+
+
+                            <td class='govuk-table__cell'>775716</td>
+
+
+
+
+                            <td class='govuk-table__cell'>Laptop</td>
+
+
+                        </tr>
+
+
+
+
+                    </tbody>
+                </table>"
+                }
+                }
+                ]
+                }) }}
+
+
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <div class="app-card govuk-!-margin-bottom-5">
+                            <h3 class="govuk-heading-m">Download Order History</h3>
+                            <p>Download all Order History information in CSV format</p>
+
+                            {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+                            {{ govukInsetText({
+                            text: "CSV format saves Order History information in one file"
                             }) }}
 
                             {% from "govuk/components/button/macro.njk" import govukButton %}
 
                             {{ govukButton({
-                            text: "Download order history"
+                            text: "Download Order History"
                             }) }}
                         </div>
                     </div>
                 </div>
 
-
-                <table id="ordering-schools" class="govuk-table">
-                    <thead class="govuk-table__head">
-                        <tr class="govuk-table__row">
-                            <th class="govuk-table__header app-schools-table__column-40">School or college</th>
-                            <th class="govuk-table__header app-schools-table__column-40">Who will order?</th>
-                            <th class="govuk-table__header app-schools-table__column-20"><span
-                                    class="govuk-visually-hidden">Status</span></th>
-                        </tr>
-                    </thead>
-                    <tbody class="govuk-table__body">
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <a class="govuk-link" href="/responsible-body/devices/schools/100219">Bluemeadow High
-                                    (100219)</a>
-                                <br>
-                                Other
-                            </td>
-                            <td class="govuk-table__cell">
-                                Local authority
-                            </td>
-                            <td class="govuk-table__cell govuk-table__cell--nowrap">
-                                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
-
-                            </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <a class="govuk-link" href="/responsible-body/devices/schools/100343">Bluemeadow
-                                    Secondary College
-                                    (100343)</a>
-                                <br>
-                                Other
-                            </td>
-                            <td class="govuk-table__cell">
-                                Local authority
-                            </td>
-                            <td class="govuk-table__cell govuk-table__cell--nowrap">
-
-
-                            </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <a class="govuk-link" href="/responsible-body/devices/schools/100216">Brighthurst
-                                    Secondary College
-                                    (100216)</a>
-                                <br>
-                                Other
-                            </td>
-                            <td class="govuk-table__cell">
-                                Local authority
-                            </td>
-                            <td class="govuk-table__cell govuk-table__cell--nowrap">
-                                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
-
-                            </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <a class="govuk-link" href="/responsible-body/devices/schools/100356">Iceborough High
-                                    (100356)</a>
-                                <br>
-                                Other
-                            </td>
-                            <td class="govuk-table__cell">
-                                Local authority
-                            </td>
-                            <td class="govuk-table__cell govuk-table__cell--nowrap">
-
-
-                            </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <a class="govuk-link" href="/responsible-body/devices/schools/100358">Ironbarrow High
-                                    (100358)</a>
-                                <br>
-                                Other
-                            </td>
-                            <td class="govuk-table__cell">
-                                Local authority
-                            </td>
-                            <td class="govuk-table__cell govuk-table__cell--nowrap">
-
-
-                            </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <a class="govuk-link" href="/responsible-body/devices/schools/100217">Ironston High
-                                    School (100217)</a>
-                                <br>
-                                Other
-                            </td>
-                            <td class="govuk-table__cell">
-                                Local authority
-                            </td>
-                            <td class="govuk-table__cell govuk-table__cell--nowrap">
-                                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
-
-                            </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <a class="govuk-link" href="/responsible-body/devices/schools/100348">Lakeacre High
-                                    School (100348)</a>
-                                <br>
-                                Other
-                            </td>
-                            <td class="govuk-table__cell">
-                                Local authority
-                            </td>
-                            <td class="govuk-table__cell govuk-table__cell--nowrap">
-
-
-                            </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <a class="govuk-link" href="/responsible-body/devices/schools/100215">Lakeacre Secondary
-                                    College
-                                    (100215)</a>
-                                <br>
-                                Other
-                            </td>
-                            <td class="govuk-table__cell">
-                                Local authority
-                            </td>
-                            <td class="govuk-table__cell govuk-table__cell--nowrap">
-                                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
-
-                            </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <a class="govuk-link" href="/responsible-body/devices/schools/100359">Marblewald
-                                    Secondary College
-                                    (100359)</a>
-                                <br>
-                                Other
-                            </td>
-                            <td class="govuk-table__cell">
-                                Local authority
-                            </td>
-                            <td class="govuk-table__cell govuk-table__cell--nowrap">
-
-
-                            </td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">
-                                <a class="govuk-link" href="/responsible-body/devices/schools/100214">Ostbarrow
-                                    Secondary College
-                                    (100214)</a>
-                                <br>
-                                Other
-                            </td>
-                            <td class="govuk-table__cell">
-                                Local authority
-                            </td>
-                            <td class="govuk-table__cell govuk-table__cell--nowrap">
-                                <strong class="govuk-tag govuk-tag--grey">Needs information</strong>
-
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
                 {% endset -%}
 
                 {% set tab2 %}
                 <h2 class="govuk-heading-l">BIOS details</h2>
                 <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-4">
+                    <div class="govuk-grid-column-two-thirds">
                         <p class="govuk-body">This page shows you all the devices associated with your organisation.
                             You can also search our database for a device by entering its serial number.</p>
                     </div>
                 </div>
                 <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-one-half">
+                    <div class="govuk-grid-column-two-thirds">
                         <div class="app-card govuk-!-margin-bottom-5">
                             <h3 class="govuk-heading-m">
                                 Search any serial number in our database
@@ -9789,7 +10205,7 @@ text: "BIOS unlock tabbed"
                             </form>
                         </div>
                     </div>
-                    <div class="govuk-grid-column-one-half">
+                    <div class="govuk-grid-column-two-thirds">
                         <div class="app-card govuk-!-margin-bottom-5">
                             <h3 class="govuk-heading-m">Download all BIOS details</h3>
                             <p>Download all BIOS information in CSV format</p>
@@ -9936,6 +10352,12 @@ text: "BIOS unlock tabbed"
 
                 {% set tab3 %}
                 <h2 class="govuk-heading-l">Guidance</h2>
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds  govuk-!-margin-bottom-4">
+                        <p class="govuk-body">The guidance content below will help you with any issues or information
+                            you may be looking for.</p>
+                    </div>
+                </div>
                 <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
                     <a class="govuk-link" href="/devices/how-to-order">How to order devices</a>
                 </h2>
@@ -10034,6 +10456,8 @@ text: "BIOS unlock tabbed"
                 {% include "design-history/design-history-sidebar.html" %}
             </div> #}
         </div>
+
+
     </div>
 
     {# <footer class="app-article__footer">
