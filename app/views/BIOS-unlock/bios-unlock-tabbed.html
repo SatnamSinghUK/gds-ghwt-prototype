@@ -9533,17 +9533,13 @@ text: "BIOS unlock tabbed"
                 {% set tab1 %}
                 <h2 class="govuk-heading-l">Order history</h2>
 
-                <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds">
-                        <p>You can view your order history below.</p>
-                    </div>
-                </div>
 
-                <div class="govuk-grid-row">
+
+                <div class="govuk-grid-row govuk-!-margin-bottom-9">
                     <div class="govuk-grid-column-two-thirds">
-                        <div class="app-card govuk-!-margin-bottom-5">
+                        <div class="app-card">
                             <h3 class="govuk-heading-m">Download order history</h3>
-                            <p>Download all order history information in CSV format</p>
+                            <p>Download all your order history information in a single .CSV file.</p>
 
                             {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
@@ -9557,6 +9553,12 @@ text: "BIOS unlock tabbed"
                             text: "Download order history"
                             }) }}
                         </div>
+                    </div>
+                </div>
+
+                <div class="govuk-grid-row  govuk-!-margin-bottom-1">
+                    <div class="govuk-grid-column-two-thirds">
+                        <p>Select each ‘plus’ symbol to see more detail.</p>
                     </div>
                 </div>
 
@@ -10303,7 +10305,7 @@ text: "BIOS unlock tabbed"
                     <div class="govuk-grid-column-two-thirds">
                         <div class="app-card govuk-!-margin-bottom-5">
                             <h3 class="govuk-heading-m">Download all BIOS details</h3>
-                            <p>Download all BIOS information in CSV format</p>
+                            <p>Download all your BIOS details in a single .CSV file.</p>
 
                             {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
@@ -10507,17 +10509,20 @@ text: "BIOS unlock tabbed"
 
                 {% set tab4 %}
                 <h2 class="govuk-heading-l">Support</h2>
-                <p>If you are still unable to find what details you are looking for, please email us.</p>
+                <p>There’s more information about how to manage your devices on Get help with technology’s <a
+                        href="https://get-help-with-tech.education.gov.uk/" target="_blank">guidance pages</a>.
+                </p>
+                <p>If you still need help, email us at:
+                </p>
                 <p><a href="mailto:COVID.TECHNOLOGY@education.gov.uk">COVID.TECHNOLOGY@education.gov.uk</a></p>
-                <h3 class="govuk-heading-m">Guidance</h3>
-                <p>You can <a href="https://get-help-with-tech.education.gov.uk/" target="_blank">view more guidance</a>
-                    to see more information about your devices.</p>
+
+
                 {% endset -%}
 
                 {{ govukTabs({
                 items: [
                 {
-                label: "Order History",
+                label: "Order history",
                 id: "order-history",
                 panel: {
                 html: tab1
