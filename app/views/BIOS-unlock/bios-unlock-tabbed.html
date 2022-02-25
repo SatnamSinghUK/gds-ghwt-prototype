@@ -9531,11 +9531,32 @@ text: "BIOS unlock tabbed"
                 {% from "govuk/components/table/macro.njk" import govukTable %}
 
                 {% set tab1 %}
-                <h2 class="govuk-heading-l">Order History</h2>
+                <h2 class="govuk-heading-l">Order history</h2>
 
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-two-thirds">
-                        <p>You can view and navigate through your Order History by order number.</p>
+                        <p>You can view your order history below.</p>
+                    </div>
+                </div>
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <div class="app-card govuk-!-margin-bottom-5">
+                            <h3 class="govuk-heading-m">Download order history</h3>
+                            <p>Download all order history information in CSV format</p>
+
+                            {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+                            {{ govukInsetText({
+                            text: "CSV format saves order history information in one file"
+                            }) }}
+
+                            {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                            {{ govukButton({
+                            text: "Download order history"
+                            }) }}
+                        </div>
                     </div>
                 </div>
 
@@ -9546,10 +9567,41 @@ text: "BIOS unlock tabbed"
                 items: [
                 {
                 heading: {
-                text: "Order: ert5554cvxcv"
+                html: "Order: ert5554cvxcv <br>21-Sep-2021"
                 },
                 content: {
-                html: "<table class='govuk-table'>
+                html: "
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-full'>
+                        <div class='app-card govuk-!-margin-bottom-2'>
+                            <table class='govuk-table govuk-!-margin-bottom-1'>
+                                <tbody class='govuk-table__body'>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Order date</th>
+                                        <td class='govuk-table__cell'>21-Sep-2021</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Order number</th>
+                                        <td class='govuk-table__cell'>ert5554cvxcv</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Total device quantity</th>
+                                        <td class='govuk-table__cell'>200</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Laptops</th>
+                                        <td class='govuk-table__cell'>190</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Routers</th>
+                                        <td class='govuk-table__cell'>10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <table class='govuk-table'>
 
                     <thead class='govuk-table__head'>
                         <tr class='govuk-table__row'>
@@ -9746,10 +9798,41 @@ text: "BIOS unlock tabbed"
                 },
                 {
                 heading: {
-                text: "Order: ert432fdfd"
+                html: "Order: ert432fdfd <br>21-Jun-2021"
                 },
                 content: {
-                html: "<table class='govuk-table'>
+                html: "
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-full'>
+                        <div class='app-card govuk-!-margin-bottom-2'>
+                            <table class='govuk-table govuk-!-margin-bottom-1'>
+                                <tbody class='govuk-table__body'>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Order date</th>
+                                        <td class='govuk-table__cell'>21-Jun-2021</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Order number</th>
+                                        <td class='govuk-table__cell'>ert432fdfd</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Total device quantity</th>
+                                        <td class='govuk-table__cell'>200</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Laptops</th>
+                                        <td class='govuk-table__cell'>190</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Routers</th>
+                                        <td class='govuk-table__cell'>10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <table class='govuk-table'>
 
 
 
@@ -9949,10 +10032,41 @@ text: "BIOS unlock tabbed"
                 },
                 {
                 heading: {
-                text: "Order: ewe88425rtedf"
+                html: "Order: ewe88425rtedf <br>05-Mar-2020"
                 },
                 content: {
-                html: "<table class='govuk-table'>
+                html: "
+                <div class='govuk-grid-row'>
+                    <div class='govuk-grid-column-full'>
+                        <div class='app-card govuk-!-margin-bottom-2'>
+                            <table class='govuk-table govuk-!-margin-bottom-1'>
+                                <tbody class='govuk-table__body'>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Order date</th>
+                                        <td class='govuk-table__cell'>05-Mar-2020</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Order number</th>
+                                        <td class='govuk-table__cell'>ewe88425rtedf</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Total device quantity</th>
+                                        <td class='govuk-table__cell'>200</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Laptops</th>
+                                        <td class='govuk-table__cell'>190</td>
+                                    </tr>
+                                    <tr class='govuk-table__row'>
+                                        <th scope='row' class='govuk-table__header'>Routers</th>
+                                        <td class='govuk-table__cell'>10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <table class='govuk-table'>
 
 
 
@@ -10155,26 +10269,7 @@ text: "BIOS unlock tabbed"
 
 
 
-                <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds">
-                        <div class="app-card govuk-!-margin-bottom-5">
-                            <h3 class="govuk-heading-m">Download Order History</h3>
-                            <p>Download all Order History information in CSV format</p>
 
-                            {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-                            {{ govukInsetText({
-                            text: "CSV format saves Order History information in one file"
-                            }) }}
-
-                            {% from "govuk/components/button/macro.njk" import govukButton %}
-
-                            {{ govukButton({
-                            text: "Download Order History"
-                            }) }}
-                        </div>
-                    </div>
-                </div>
 
                 {% endset -%}
 
@@ -10247,80 +10342,79 @@ text: "BIOS unlock tabbed"
                                 <td class="govuk-table__cell">TP-Link 4G LTE Mobile Wi-Fi</td>
                                 <td class="govuk-table__cell">Norfolk County Council</td>
                                 <td class="govuk-table__cell">Ironston High School</td>
-                                <td class="govuk-table__cell"><a
-                                        href="/assets/165-0b3742efaeda72c5c1a610550e1036920479c33b">Show</a></td>
+                                <td class="govuk-table__cell"><a href="../device-asset-hash" target="_blank">Show</a>
+                                </td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">897698</td>
                                 <td class="govuk-table__cell">Dynabook TECRA A40-G-18</td>
                                 <td class="govuk-table__cell">Norfolk County Council</td>
                                 <td class="govuk-table__cell">Ironston High School</td>
-                                <td class="govuk-table__cell"><a
-                                        href="/assets/166-a5558c1c99f101d65a5e33b4ed52c35201b62f16">Show</a></td>
+                                <td class="govuk-table__cell"><a href="../device-asset-hash" target="_blank">Show</a>
+                                </td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">735577</td>
                                 <td class="govuk-table__cell">Acer TMB118-G2-RN</td>
                                 <td class="govuk-table__cell">Norfolk County Council</td>
                                 <td class="govuk-table__cell">Ironston High School</td>
-                                <td class="govuk-table__cell"><a
-                                        href="/assets/167-29682245bfa0cbdad82665e668d5db5f18687379">Show</a></td>
+                                <td class="govuk-table__cell"><a href="../device-asset-hash" target="_blank">Show</a>
+                                </td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">700346</td>
                                 <td class="govuk-table__cell">HP Inc ProBook X360</td>
                                 <td class="govuk-table__cell">Norfolk County Council</td>
                                 <td class="govuk-table__cell">Ironston High School</td>
-                                <td class="govuk-table__cell"><a
-                                        href="/assets/168-b9edb38c97e06177277ba23b6db4cf06c789b7b8">Show</a></td>
+                                <td class="govuk-table__cell"><a href="../device-asset-hash" target="_blank">Show</a>
+                                </td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">881632</td>
                                 <td class="govuk-table__cell">Dynabook E-10-G-106</td>
                                 <td class="govuk-table__cell">Norfolk County Council</td>
                                 <td class="govuk-table__cell">Ironston High School</td>
-                                <td class="govuk-table__cell"><a
-                                        href="/assets/169-e1e93f39114647e5eff6480d5022ebe2ccd70d5d">Show</a></td>
+                                <td class="govuk-table__cell"><a href="../device-asset-hash" target="_blank"">Show</a></td>
                             </tr>
-                            <tr class="govuk-table__row">
+                            <tr class=" govuk-table__row">
                                 <td class="govuk-table__cell">881568</td>
                                 <td class="govuk-table__cell">HP Inc ProBook X360</td>
                                 <td class="govuk-table__cell">Norfolk County Council</td>
                                 <td class="govuk-table__cell">Ironston High School</td>
-                                <td class="govuk-table__cell"><a
-                                        href="/assets/170-0b2f51718681da809980ef545b5029fa6bd65fd5">Show</a></td>
+                                <td class="govuk-table__cell"><a href="../device-asset-hash" target="_blank">Show</a>
+                                </td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">627597</td>
                                 <td class="govuk-table__cell">HP Inc Chromebook 14 G6</td>
                                 <td class="govuk-table__cell">Norfolk County Council</td>
                                 <td class="govuk-table__cell">Ironston High School</td>
-                                <td class="govuk-table__cell"><a
-                                        href="/assets/171-54a2ed42c7d5c1bdba993ac7244492417f3765d3">Show</a></td>
+                                <td class="govuk-table__cell"><a href="../device-asset-hash" target="_blank">Show</a>
+                                </td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">892780</td>
                                 <td class="govuk-table__cell">Tactus GeoBook GE126</td>
                                 <td class="govuk-table__cell">Norfolk County Council</td>
                                 <td class="govuk-table__cell">Ironston High School</td>
-                                <td class="govuk-table__cell"><a
-                                        href="/assets/172-1256d2ee2bf806a2e87b181deaa8ea93f36b5165">Show</a></td>
+                                <td class="govuk-table__cell"><a href="../device-asset-hash" target="_blank">Show</a>
+                                </td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">980830</td>
                                 <td class="govuk-table__cell">Dell Dell 3100 Chromebook</td>
                                 <td class="govuk-table__cell">Norfolk County Council</td>
                                 <td class="govuk-table__cell">Ironston High School</td>
-                                <td class="govuk-table__cell"><a
-                                        href="/assets/173-eca408092d65ede739d8a595de79d1ca2a9f427b">Show</a></td>
+                                <td class="govuk-table__cell"><a href="../device-asset-hash" target="_blank">Show</a>
+                                </td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">900693</td>
                                 <td class="govuk-table__cell">Acer TMB118-G2-RN</td>
                                 <td class="govuk-table__cell">Norfolk County Council</td>
                                 <td class="govuk-table__cell">Ironston High School</td>
-                                <td class="govuk-table__cell"><a
-                                        href="/assets/164-f2d3d453568f16b8351fec944ef9a699b308ddd2">Show</a></td>
+                                <td class="govuk-table__cell"><a href="../device-asset-hash" target="_blank">Show</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -10415,34 +10509,30 @@ text: "BIOS unlock tabbed"
                 <h2 class="govuk-heading-l">Support</h2>
                 <p>If you are still unable to find what details you are looking for, please email us.</p>
                 <p><a href="mailto:COVID.TECHNOLOGY@education.gov.uk">COVID.TECHNOLOGY@education.gov.uk</a></p>
+                <h3 class="govuk-heading-m">Guidance</h3>
+                <p>You can <a href="https://get-help-with-tech.education.gov.uk/" target="_blank">view more guidance</a>
+                    to see more information about your devices.</p>
                 {% endset -%}
 
                 {{ govukTabs({
                 items: [
                 {
                 label: "Order History",
-                id: "past-day",
+                id: "order-history",
                 panel: {
                 html: tab1
                 }
                 },
                 {
                 label: "BIOS details",
-                id: "past-week",
+                id: "bios-details",
                 panel: {
                 html: tab2
                 }
                 },
                 {
-                label: "Guidance",
-                id: "past-month",
-                panel: {
-                html: tab3
-                }
-                },
-                {
                 label: "Support",
-                id: "past-year",
+                id: "support",
                 panel: {
                 html: tab4
                 }
@@ -10452,9 +10542,6 @@ text: "BIOS unlock tabbed"
 
             </div>
 
-            {# <div class="govuk-grid-column-one-third">
-                {% include "design-history/design-history-sidebar.html" %}
-            </div> #}
         </div>
 
 
